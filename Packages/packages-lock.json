@@ -1,7 +1,11 @@
 {
   "dependencies": {
     "com.unity.burst": {
+<<<<<<< Updated upstream
       "version": "1.8.2",
+=======
+      "version": "1.6.6",
+>>>>>>> Stashed changes
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -9,6 +13,25 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
+=======
+    "com.unity.collab-proxy": {
+      "version": "1.17.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.services.core": "1.0.1"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.editorcoroutines": {
+      "version": "1.0.0",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+>>>>>>> Stashed changes
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
@@ -16,8 +39,27 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
     "com.unity.ide.rider": {
       "version": "3.0.18",
+=======
+    "com.unity.feature.development": {
+      "version": "1.0.1",
+      "depth": 0,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.ide.visualstudio": "2.0.16",
+        "com.unity.ide.rider": "3.0.15",
+        "com.unity.ide.vscode": "1.2.5",
+        "com.unity.editorcoroutines": "1.0.0",
+        "com.unity.performance.profile-analyzer": "1.1.1",
+        "com.unity.test-framework": "1.1.31",
+        "com.unity.testtools.codecoverage": "1.0.1"
+      }
+    },
+    "com.unity.ide.rider": {
+      "version": "3.0.15",
+>>>>>>> Stashed changes
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -25,6 +67,25 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
+=======
+    "com.unity.ide.visualstudio": {
+      "version": "2.0.16",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.9"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.ide.vscode": {
+      "version": "1.2.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+>>>>>>> Stashed changes
     "com.unity.mathematics": {
       "version": "1.2.6",
       "depth": 1,
@@ -32,8 +93,27 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
     "com.unity.render-pipelines.core": {
       "version": "12.1.10",
+=======
+    "com.unity.nuget.newtonsoft-json": {
+      "version": "3.0.2",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.performance.profile-analyzer": {
+      "version": "1.1.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.render-pipelines.core": {
+      "version": "12.1.7",
+>>>>>>> Stashed changes
       "depth": 1,
       "source": "builtin",
       "dependencies": {
@@ -43,16 +123,25 @@
       }
     },
     "com.unity.render-pipelines.high-definition": {
+<<<<<<< Updated upstream
       "version": "12.1.10",
+=======
+      "version": "12.1.7",
+>>>>>>> Stashed changes
       "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.mathematics": "1.2.4",
+<<<<<<< Updated upstream
         "com.unity.burst": "1.8.2",
+=======
+        "com.unity.burst": "1.6.0",
+>>>>>>> Stashed changes
         "com.unity.modules.video": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.modules.terrain": "1.0.0",
+<<<<<<< Updated upstream
         "com.unity.render-pipelines.core": "12.1.10",
         "com.unity.shadergraph": "12.1.10",
         "com.unity.visualeffectgraph": "12.1.10",
@@ -65,6 +154,20 @@
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "12.1.10"
+=======
+        "com.unity.render-pipelines.core": "12.1.7",
+        "com.unity.shadergraph": "12.1.7",
+        "com.unity.visualeffectgraph": "12.1.7",
+        "com.unity.render-pipelines.high-definition-config": "12.1.7"
+      }
+    },
+    "com.unity.render-pipelines.high-definition-config": {
+      "version": "12.1.7",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "12.1.7"
+>>>>>>> Stashed changes
       }
     },
     "com.unity.searcher": {
@@ -74,12 +177,39 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
     "com.unity.shadergraph": {
       "version": "12.1.10",
       "depth": 1,
       "source": "builtin",
       "dependencies": {
         "com.unity.render-pipelines.core": "12.1.10",
+=======
+    "com.unity.services.core": {
+      "version": "1.4.2",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.unitywebrequest": "1.0.0",
+        "com.unity.nuget.newtonsoft-json": "3.0.2",
+        "com.unity.modules.androidjni": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.settings-manager": {
+      "version": "1.0.3",
+      "depth": 2,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.shadergraph": {
+      "version": "12.1.7",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.render-pipelines.core": "12.1.7",
+>>>>>>> Stashed changes
         "com.unity.searcher": "4.9.1"
       }
     },
@@ -94,6 +224,19 @@
       },
       "url": "https://packages.unity.com"
     },
+<<<<<<< Updated upstream
+=======
+    "com.unity.testtools.codecoverage": {
+      "version": "1.0.1",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.0.16",
+        "com.unity.settings-manager": "1.0.1"
+      },
+      "url": "https://packages.unity.com"
+    },
+>>>>>>> Stashed changes
     "com.unity.textmeshpro": {
       "version": "3.0.6",
       "depth": 0,
@@ -125,6 +268,7 @@
       }
     },
     "com.unity.visualeffectgraph": {
+<<<<<<< Updated upstream
       "version": "12.1.10",
       "depth": 1,
       "source": "builtin",
@@ -133,6 +277,26 @@
         "com.unity.render-pipelines.core": "12.1.10"
       }
     },
+=======
+      "version": "12.1.7",
+      "depth": 1,
+      "source": "builtin",
+      "dependencies": {
+        "com.unity.shadergraph": "12.1.7",
+        "com.unity.render-pipelines.core": "12.1.7"
+      }
+    },
+    "com.unity.visualscripting": {
+      "version": "1.7.8",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0",
+        "com.unity.modules.jsonserialize": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+>>>>>>> Stashed changes
     "com.unity.modules.ai": {
       "version": "1.0.0",
       "depth": 0,

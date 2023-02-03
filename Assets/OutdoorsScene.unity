@@ -38,7 +38,11 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
+<<<<<<< Updated upstream
   m_IndirectSpecularColor: {r: 262.38354, g: 325.1084, b: 430.30957, a: 1}
+=======
+  m_IndirectSpecularColor: {r: 1607.5831, g: 1674.3088, b: 2143.0486, a: 1}
+>>>>>>> Stashed changes
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -349,7 +353,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 432432461}
+<<<<<<< Updated upstream
   - component: {fileID: 432432462}
+=======
+  - component: {fileID: 432432460}
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Sky and Fog Volume
   m_TagString: Untagged
@@ -357,6 +365,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< Updated upstream
+=======
+--- !u!114 &432432460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432432459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 8ba92e2dd7f884a0f88b98fa2d235fe7, type: 2}
+>>>>>>> Stashed changes
 --- !u!4 &432432461
 Transform:
   m_ObjectHideFlags: 0
@@ -372,6 +400,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!114 &432432462
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -389,6 +418,8 @@ MonoBehaviour:
   blendDistance: 0
   weight: 1
   sharedProfile: {fileID: 11400000, guid: ea5bccbe313ebd54ba4d65a17eaf7b9f, type: 2}
+=======
+>>>>>>> Stashed changes
 --- !u!1 &1823688464
 GameObject:
   m_ObjectHideFlags: 0
@@ -503,8 +534,11 @@ MonoBehaviour:
   taaAntiFlicker: 0.5
   taaMotionVectorRejection: 0
   taaAntiHistoryRinging: 0
+<<<<<<< Updated upstream
   taaBaseBlendFactor: 0.875
   taaJitterScale: 1
+=======
+>>>>>>> Stashed changes
   physicalParameters:
     m_Iso: 200
     m_ShutterSpeed: 0.005
@@ -631,7 +665,10 @@ MonoBehaviour:
   m_Profile: {fileID: 11400000, guid: 8ba92e2dd7f884a0f88b98fa2d235fe7, type: 2}
   m_StaticLightingSkyUniqueID: 4
   m_StaticLightingCloudsUniqueID: 0
+<<<<<<< Updated upstream
   m_StaticLightingVolumetricClouds: 0
+=======
+>>>>>>> Stashed changes
 --- !u!4 &2013410475
 Transform:
   m_ObjectHideFlags: 1

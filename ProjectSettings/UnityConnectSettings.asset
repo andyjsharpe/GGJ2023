@@ -23,7 +23,10 @@ UnityConnectSettings:
     m_Enabled: 0
     m_TestMode: 0
     m_InitializeOnStartup: 1
+<<<<<<< Updated upstream
     m_PackageRequiringCoreStatsPresent: 0
+=======
+>>>>>>> Stashed changes
   UnityAdsSettings:
     m_Enabled: 0
     m_InitializeOnStartup: 1
