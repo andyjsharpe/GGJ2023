@@ -61,6 +61,7 @@ public class LevelMenuManager : MonoBehaviour
         // Create Level Selector Buttons
         for (int i = 1; i <= levelCount; i++)
         {
+            Debug.Log("i" + i);
             GameObject lvlBtn = Instantiate(levelPrefab, menuGrid.transform, false);
             lvlBtn.GetComponent<LevelSelector>().ChangeText(i.ToString());
 
