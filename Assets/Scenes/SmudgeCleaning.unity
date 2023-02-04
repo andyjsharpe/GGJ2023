@@ -274,6 +274,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4e5447a3da1f0b4ab2623ef76595c49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  smudges: []
+  smudgePrefab: {fileID: 4060737163873261844, guid: ab935353059cf254589df681d8251af4,
+    type: 3}
+  count: 10
+  smudgeSpriteLocation: smudges-1
 --- !u!114 &123017928
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3591628952813130110}
   - component: {fileID: -5950406452938925330}
   m_Layer: 0
-  m_Name: Button 1
+  m_Name: SmudgePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -122,13 +122,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CleaningTask, Assembly-CSharp
-        m_MethodName: DestorySmudge
-        m_Mode: 2
+      - m_Target: {fileID: -5950406452938925330}
+        m_TargetAssemblyTypeName: Destory, Assembly-CSharp
+        m_MethodName: SelfDestruct
+        m_Mode: 1
         m_Arguments:
-          m_ObjectArgument: {fileID: 4060737163873261844}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
