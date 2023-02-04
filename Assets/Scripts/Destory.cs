@@ -6,6 +6,6 @@ public class Destory : MonoBehaviour
 {
     public void SelfDestruct()
     {
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 }
