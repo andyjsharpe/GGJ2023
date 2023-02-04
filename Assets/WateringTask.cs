@@ -35,11 +35,9 @@ public class WateringTask : MonoBehaviour
     // Reading Collision with Plant
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Collision Entered");
         GameObject other = collision.gameObject;
         if (other.tag =="Plant")
         {
-            Debug.Log("Watering!");
             WaterME waterStatus = other.GetComponent<WaterME>();
             waterStatus.watering = true;
         }
@@ -47,11 +45,9 @@ public class WateringTask : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Collision Exited");
         GameObject other = collision.gameObject;
         if (other.tag == "Plant")
         {
-            Debug.Log("NOT Watering!");
             WaterME waterStatus = other.GetComponent<WaterME>();
             waterStatus.watering = false;
         }

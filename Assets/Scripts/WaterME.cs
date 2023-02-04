@@ -29,8 +29,13 @@ public class WaterME : MonoBehaviour
             {
                 if (!complete)
                 {
+                    // Change status to complete is true & Update WATERED_COUNT
                     complete = true;
                     WateringTask.WATERED_COUNT++;
+
+                    // Temporarily, change sprite tint
+                    SpriteRenderer renderer = GetComponent<SpriteRenderer>();
+                    renderer.color = Color.yellow;
                 }
             }
         }
