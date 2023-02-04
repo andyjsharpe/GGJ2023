@@ -11,6 +11,8 @@ public class InteractionManager : MonoBehaviour
     private LayerMask mask;
     [SerializeField]
     private GameObject interactionPopup;
+    [SerializeField]
+    private GameObject completedPopup;
 
     // Start is called before the first frame update
     void Start()
@@ -24,10 +26,17 @@ public class InteractionManager : MonoBehaviour
         Interactable interactable = checkInteraction();
         if (interactable != null)
         {
-            interactionPopup.SetActive(true);
+            if (interactable.isDoable())
+            {
+                interactionPopup.SetActive(true);
+            }else
+            {
+                completedPopup.SetActive(true);
+            }
         } else
         {
             interactionPopup.SetActive(false);
+            completedPopup.SetActive(false);
         }
     }
 
