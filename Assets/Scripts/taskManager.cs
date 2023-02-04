@@ -2,6 +2,7 @@ using System;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
 
 public class taskManager : MonoBehaviour
@@ -11,12 +12,13 @@ public class taskManager : MonoBehaviour
     [SerializeField]
     private SceneAsset nextScene; //the next main scene
     [SerializeField]
+    private SceneAsset failScene;
+    [SerializeField]
     private TextMeshProUGUI clock;
     [SerializeField]
     private TaskOptions[] requiredTasks;
     [SerializeField]
     private TaskOptions[] optionalTasks;
-
 
     public enum TaskOptions
     {
@@ -50,7 +52,7 @@ public class taskManager : MonoBehaviour
     private void levelTransition()
     {
         //reset timer
-        PlayerPrefs.SetFloat(associatedScene.name + "-" + "time", 120);
+        PlayerPrefs.SetFloat(associatedScene.name + "-" + "time", 20);
 
         //if level not completed 
         if (!requiredDone())
@@ -58,7 +60,9 @@ public class taskManager : MonoBehaviour
             //clear the playerprefs in this level
             clearThisLevel();
             PlayerPrefs.SetInt("toReturnTo", SceneManager.GetActiveScene().buildIndex);
-            SceneManager.LoadScene("FailScene");
+            Debug.Log("Failed");
+            SceneManager.LoadScene(failScene.name);
+            return;
         }
         
         //increase sanity based on number of optional tasks done

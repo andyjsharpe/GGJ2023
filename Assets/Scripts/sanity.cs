@@ -41,7 +41,7 @@ public class sanity : MonoBehaviour
     private void Update()
     {
         sanityVal = Mathf.Lerp(sanityVal, sanityTarget, Time.deltaTime / 4);    //interpolate to the target value smoothly
-        randVal += Random.Range(0.0f, 1) * sanityVal * sanityVal * Time.deltaTime * 2.0f * Mathf.PI;
+        randVal += Random.Range(0.0f, 1.0f) * sanityVal * sanityVal * Time.deltaTime * 2.0f * Mathf.PI;
         SetComps();
     }
 
