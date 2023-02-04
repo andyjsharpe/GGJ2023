@@ -1,6 +1,8 @@
 using System;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class taskManager : MonoBehaviour
 {
@@ -8,6 +10,13 @@ public class taskManager : MonoBehaviour
     private SceneAsset associatedScene; //the main scene this house or minigame belongs to
     [SerializeField]
     private SceneAsset nextScene; //the next main scene
+    [SerializeField]
+    private TextMeshProUGUI clock;
+    [SerializeField]
+    private TaskOptions[] requiredTasks;
+    [SerializeField]
+    private TaskOptions[] optionalTasks;
+
 
     public enum TaskOptions
     {
@@ -17,13 +26,83 @@ public class taskManager : MonoBehaviour
         TillWeeds,
         Clean,
         Read,
-        Eat
+        Cook,
+        Socialize
     }
 
-    //marks a task as done
-    private void markTaskDone(TaskOptions option)
+    private void Update()
     {
-        PlayerPrefs.SetInt(associatedScene.name + "-" + option.ToString(), 1);
+        float time = PlayerPrefs.GetFloat(associatedScene.name + "-" + "time");
+        time -= Time.deltaTime;
+        clock.text = ((int)time).ToString();
+        PlayerPrefs.SetFloat(associatedScene.name + "-" + "time", time);
+
+        //level is over
+        if (time <= 0)
+        {
+            levelTransition();
+        } else if (allDone())
+        {
+            levelTransition();
+        }
+    }
+
+    private void levelTransition()
+    {
+        //reset timer
+        PlayerPrefs.SetFloat(associatedScene.name + "-" + "time", 120);
+
+        //if level not completed 
+        if (!requiredDone())
+        {
+            //clear the playerprefs in this level
+            clearThisLevel();
+            PlayerPrefs.SetInt("toReturnTo", SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene("FailScene");
+        }
+        
+        //increase sanity based on number of optional tasks done
+        float sanityTarget = PlayerPrefs.GetFloat("sanityTarget");
+        sanityTarget += Mathf.Min((1 - optionalDoneRatio())/6.0f, 1.0f); //makes it so if no optional tasks are done, sanity will rech last by the last level
+        PlayerPrefs.SetFloat("sanityTarget", sanityTarget);
+
+        //clear the playerprefs in this level
+        clearThisLevel();
+        //clear the playerprefs in the next level
+        clearNextLevel();
+
+        //open next scene
+        SceneManager.LoadScene(nextScene.name);
+    }
+
+    private bool requiredDone()
+    {
+        foreach (taskManager.TaskOptions task in requiredTasks)
+        {
+            if (!isTaskDone(task))
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private float optionalDoneRatio()
+    {
+        int doneCount = 0;
+        foreach (taskManager.TaskOptions task in optionalTasks)
+        {
+            if (isTaskDone(task))
+            {
+                doneCount += 1;
+            }
+        }
+        return doneCount/optionalTasks.Length;
+    }
+
+    private bool allDone()
+    {
+        return requiredDone() && optionalDoneRatio() == 1;
     }
 
     public bool isTaskDone(TaskOptions option)
@@ -32,30 +111,24 @@ public class taskManager : MonoBehaviour
     }
 
     //clears all tasks in the next level
-    private void clearNextLevel()
+    private void clearLevel(SceneAsset scene)
     {
         string[] taskNames = System.Enum.GetNames(typeof(TaskOptions));
         foreach (string taskName in taskNames)
         {
-            PlayerPrefs.SetInt(nextScene.name + "-" + taskName, 0);
+            PlayerPrefs.SetInt(scene.name + "-" + taskName, 0);
         }
     }
 
-    //checks if all tasks in the associated scene are done
-    public bool areAllTasksDone()
+    //clears all tasks in the next level
+    private void clearThisLevel()
     {
-        foreach (taskManager.TaskOptions task in Enum.GetValues(typeof(taskManager.TaskOptions)))
-        {
-            if (task == TaskOptions.None)
-            {
-                continue;
-            }
-            
-            if (!isTaskDone(task))
-            {
-                return false;
-            }
-        }
-        return true;
+        clearLevel(associatedScene);
+    }
+
+    //clears all tasks in the next level
+    private void clearNextLevel()
+    {
+        clearLevel(nextScene);
     }
 }

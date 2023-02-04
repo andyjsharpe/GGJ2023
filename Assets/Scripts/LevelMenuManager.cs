@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ public class LevelMenuManager : MonoBehaviour
     // Misc Variables
     public static Color lvlColor = Color.white;
     public static string LEVEL_REACHED_KEY = "temp";
+    public SceneAsset[] mainScenes;
     int LEVEL_REACHED = 0;
 
 
@@ -63,17 +65,25 @@ public class LevelMenuManager : MonoBehaviour
         {
             Debug.Log("i" + i);
             GameObject lvlBtn = Instantiate(levelPrefab, menuGrid.transform, false);
-            lvlBtn.GetComponent<LevelSelector>().ChangeText(i.ToString());
+            LevelSelector ls = lvlBtn.GetComponent<LevelSelector>();
+            ls.ChangeText(i.ToString());
+            ls.toChangeTo = mainScenes[i - 1];
+            ls.levelNum = i - 1;
 
             // Change Color
             //Image lvlImg = lvlBtn.GetComponent<Image>();
             //lvlImg.color = lvlColor;
 
+            Button btnComponent = lvlBtn.GetComponent<Button>();
             // Deactivate button if not yet unlocked
             if (i > LEVEL_REACHED)
             {
-                Button btnComponent = lvlBtn.GetComponent<Button>();
+                
                 btnComponent.interactable = false;
+            } else
+            {
+                //set onclick to transition scene
+                btnComponent.onClick.AddListener(delegate { ls.Click(); });
             }
         }
 

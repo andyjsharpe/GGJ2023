@@ -7,8 +7,8 @@ using UnityEngine.Rendering.HighDefinition;
 
 public class sanity : MonoBehaviour
 {
+    private float sanityTarget;
     private float sanityVal = 0;    //0 = "full", higher values are more "insane"
-    public float sanityTarget = 0;
     private float randVal = 0;
     private Volume mainVol;
     private VolumeProfile profile;
@@ -19,6 +19,8 @@ public class sanity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sanityTarget = PlayerPrefs.GetFloat("sanityTarget");
+
         mainVol = GetComponent<Volume>();
 
         profile = mainVol.profile;

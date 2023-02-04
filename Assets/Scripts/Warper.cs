@@ -11,6 +11,7 @@ public class Warper : MonoBehaviour
 
     public void doWarp()
     {
+        PlayerPrefs.SetInt("toReturnTo", SceneManager.GetActiveScene().buildIndex);
         SceneManager.LoadScene(toWarpTo.name);
     }
 }
