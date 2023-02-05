@@ -345,7 +345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftPage: {fileID: 131566145}
-  rightPage: {fileID: 0}
+  rightPage: {fileID: 1223383176}
   linePrefab: {fileID: 6606602361539750768, guid: 53a79db196b482a4fb087ecc44297a2e,
     type: 3}
 --- !u!1 &918643927

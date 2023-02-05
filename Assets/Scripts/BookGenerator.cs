@@ -14,6 +14,11 @@ public class BookGenerator : MonoBehaviour
 
     public const int LETTERS_PER_LINE = 27;
     public const int LINES_PER_PAGE = 13;
+
+    public int READING_LIMIT;
+    public static int READING_COUNT;
+
+    bool complete = false;
     
 
 
@@ -32,12 +37,21 @@ public class BookGenerator : MonoBehaviour
                 GameObject line = Instantiate(linePrefab, leftPage.transform);
                 TextMeshProUGUI text = line.GetComponent<TextMeshProUGUI>();
                 text.SetText(lines[i]);
+                if (lines[i].Equals(""))
+                {
+                    text.color = LineClick.clicked;
+                }
+                else
+                {
+                    READING_LIMIT++;
+                }
             } else
             {
                 GameObject line = Instantiate(linePrefab, leftPage.transform);
                 TextMeshProUGUI text = line.GetComponent<TextMeshProUGUI>();
                 text.SetText("");
-            }   
+                text.color = LineClick.clicked;
+            }
         }
 
         // Add line to right page
@@ -48,12 +62,20 @@ public class BookGenerator : MonoBehaviour
                 GameObject line = Instantiate(linePrefab, rightPage.transform);
                 TextMeshProUGUI text = line.GetComponent<TextMeshProUGUI>();
                 text.SetText(lines[i]);
+                if (lines[i].Equals(""))
+                {
+                    text.color = LineClick.clicked;
+                } else
+                {
+                    READING_LIMIT++;
+                }
             }
             else
             {
                 GameObject line = Instantiate(linePrefab, leftPage.transform);
                 TextMeshProUGUI text = line.GetComponent<TextMeshProUGUI>();
                 text.SetText("");
+                text.color = LineClick.clicked;
             }
         }
 
@@ -62,7 +84,12 @@ public class BookGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (!complete && READING_COUNT == READING_LIMIT)
+        {
+            complete = true;
+            Debug.Log("TASK COMPLETED!");
+
+        }
     }
 
     private List<string> generateLines(string day)
