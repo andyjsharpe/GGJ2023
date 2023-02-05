@@ -43,6 +43,7 @@ public class RemovingTask : MonoBehaviour
         {
             complete = true;
             Debug.Log("TASK COMPLETE!");
+            REMOVING_COUNT = 0;
             taskCompleter.completeTask(taskManager.TaskOptions.TillWeeds); //This completes the "TillWeeds" task
         }
     }

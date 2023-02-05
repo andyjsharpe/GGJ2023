@@ -36,6 +36,7 @@ public class WateringTask : MonoBehaviour
         if(plantCount == WATERED_COUNT)
         {
             Debug.Log("TASK COMPLETE");
+            WATERED_COUNT = 0;
             taskCompleter.completeTask(taskManager.TaskOptions.Water); //This completes the "Water" task
         }
     }
