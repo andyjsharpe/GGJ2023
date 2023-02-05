@@ -3,7 +3,67 @@ guid: 340907fa01fca3645b38ddc15dad3e34
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BathWall
+    second: {fileID: 2100000, guid: 2a57bad2f8ad1ca4d9580035b3b08cc7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bathroom
+    second: {fileID: 2100000, guid: d127433224163594aa818889266bcf85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BrickExterior
+    second: {fileID: 2100000, guid: f5b8a72f30a58e54a936d720b38d6789, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CarpetFloor
+    second: {fileID: 2100000, guid: c64091d2d94f43b48803db8d9403a8d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ChildBedroom
+    second: {fileID: 2100000, guid: a2621bb02299139429df3c19bcce6b7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DoorBreaks
+    second: {fileID: 2100000, guid: 2e644f9ce3a61bd4a8049f33a87045f4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Exterior
+    second: {fileID: 2100000, guid: 7cb86c3bc00e8c6468d8f1663a80c23e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hardwood
+    second: {fileID: 2100000, guid: aac59b29b74a1784b8ebaab1ae5d0bf1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Kitchen
+    second: {fileID: 2100000, guid: 4c9b8be35a97e8b409cd29c1d024c735, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MainBedWall
+    second: {fileID: 2100000, guid: 882a62e4d807d0b4b98931f7fe08e788, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RoofTiles
+    second: {fileID: 2100000, guid: 797af1b224c06c5429b70ad201a5c56a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WallInterior
+    second: {fileID: 2100000, guid: facb004ec3839bc49bfce3fac8953fa6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

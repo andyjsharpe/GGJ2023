@@ -3,7 +3,17 @@ guid: 1b08cbeb33a357743bfdba4aa0da897b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lid
+    second: {fileID: 2100000, guid: ccf671ebee042fd4daee211fa506562c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Porcelain
+    second: {fileID: 2100000, guid: 8204e6dae148721478777ecf394d3995, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -27,7 +27,7 @@ public class LevelSelector : MonoBehaviour
         }
 
         //reset timer
-        PlayerPrefs.SetFloat(toChangeTo.name + "-" + "time", 20);
+        PlayerPrefs.SetFloat(toChangeTo.name + "-" + "time", 120);
 
         SceneManager.LoadScene(toChangeTo.name);
     }

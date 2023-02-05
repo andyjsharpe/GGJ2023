@@ -52,7 +52,7 @@ public class taskManager : MonoBehaviour
     private void levelTransition()
     {
         //reset timer
-        PlayerPrefs.SetFloat(associatedScene.name + "-" + "time", 20);
+        PlayerPrefs.SetFloat(associatedScene.name + "-" + "time", 120);
 
         //if level not completed 
         if (!requiredDone())

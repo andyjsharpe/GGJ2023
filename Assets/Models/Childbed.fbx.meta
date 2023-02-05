@@ -3,11 +3,41 @@ guid: c89eb41859a757640a333728c4a0a943
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Beads
+    second: {fileID: 2100000, guid: f2d4080a63af60b4bb2177695370f62a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BearFur
+    second: {fileID: 2100000, guid: f177531d9f4901b4abd3c816511ced22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bed
+    second: {fileID: 2100000, guid: 5606c173c11c1504f9420426639f99a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Covers
+    second: {fileID: 2100000, guid: 0689c16f2cea8654995e9dc104d4d14c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Door_material
+    second: {fileID: 2100000, guid: d97c30b751f29154ba70f404c6896549, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: UnderCovers
+    second: {fileID: 2100000, guid: b87e3459dc9f34742b719efb710aa4a2, type: 2}
   materials:
     materialImportMode: 2
-    materialName: 0
-    materialSearch: 1
+    materialName: 2
+    materialSearch: 0
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
