@@ -43,7 +43,7 @@ public class SocializingTask : MonoBehaviour
                 //recalculate tasks
                 foreach (TaskActivator taskActivator in FindObjectsOfType<TaskActivator>())
                 {
-                    //taskActivator.recalcTasks();
+                    taskActivator.recalcTasks();
                 }
             }
         } else if (!socialized)

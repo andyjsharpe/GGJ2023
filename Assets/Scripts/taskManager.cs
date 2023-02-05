@@ -40,6 +40,7 @@ public class taskManager : MonoBehaviour
     private void Start()
     {
         PlayerPrefs.SetInt(LevelMenuManager.LEVEL_REACHED_KEY, levelNum);
+        PlayerPrefs.SetInt("toReturnTo", FindObjectOfType<taskManager>().getSceneIndexFromName(associatedScene));
     }
 
     private void Update()
@@ -63,6 +64,15 @@ public class taskManager : MonoBehaviour
         {
             levelTransition();
         }
+    }
+
+    public int getSceneIndexFromName(SceneAsset scene)
+    {
+        string scenePath = SceneManager.GetSceneByName(scene.name).path;
+        int buildIndex = SceneUtility.GetBuildIndexByScenePath(scenePath);
+        
+
+        return buildIndex;
     }
 
     private void levelTransition()
@@ -97,7 +107,7 @@ public class taskManager : MonoBehaviour
         //clear the playerprefs in the next level
         clearNextLevel();
 
-        PlayerPrefs.SetInt("toReturnTo", SceneManager.GetSceneByName(nextScene.name).buildIndex);
+        PlayerPrefs.SetInt("toReturnTo", getSceneIndexFromName(nextScene));
 
         //open next scene
         SceneManager.LoadScene(winScene.name);

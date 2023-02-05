@@ -1826,6 +1826,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 494a4c5cd3fdb6345b5d32b0ea4ae1d8,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 494a4c5cd3fdb6345b5d32b0ea4ae1d8,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -5688,7 +5693,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   associatedScene: {fileID: 102900000, guid: 9ff2b94837760bb4d989841d37df03d4, type: 3}
-  nextScene: {fileID: 102900000, guid: 963f7406c03aff642b7ebbf0e4f44f0e, type: 3}
+  nextScene: {fileID: 102900000, guid: 934c2646c247e564d89492c6c5d90313, type: 3}
   failScene: {fileID: 102900000, guid: fc5d290e09e53f14a89984640ff609e6, type: 3}
   winScene: {fileID: 102900000, guid: a4301f2a5c8a8164b90b75608cea02f3, type: 3}
   clocks:
@@ -7268,6 +7273,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: wateringcan
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 654fd71cc4f712041bbab5838c21171a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 654fd71cc4f712041bbab5838c21171a, type: 3}
@@ -13713,6 +13723,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: fryingpan
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f8ec917ebf945f044ba648ca0b608dc4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8ec917ebf945f044ba648ca0b608dc4, type: 3}
 --- !u!4 &1435666728 stripped
@@ -17510,6 +17525,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: c172df3ef5453e641b340070bbe48fe6,
         type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c172df3ef5453e641b340070bbe48fe6,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
@@ -19259,6 +19279,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FertilizerBag
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f1c61bfb1a880e24abc291653106a642,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f1c61bfb1a880e24abc291653106a642,
         type: 3}
