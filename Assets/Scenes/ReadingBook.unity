@@ -148,7 +148,7 @@ PrefabInstance:
     - target: {fileID: 993841644402357586, guid: 0985177b3c024824dbd300e3b3b9a661,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 993841644402357586, guid: 0985177b3c024824dbd300e3b3b9a661,
         type: 3}
@@ -375,7 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftPage: {fileID: 931043495}
   rightPage: {fileID: 386398048}
-  linePrefab: {fileID: 6606602361539750768, guid: 53a79db196b482a4fb087ecc44297a2e,
+  linePrefab: {fileID: 4740639504329994297, guid: 53a79db196b482a4fb087ecc44297a2e,
     type: 3}
   READING_LIMIT: 0
 --- !u!114 &491498575

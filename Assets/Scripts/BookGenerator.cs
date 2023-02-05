@@ -12,11 +12,13 @@ public class BookGenerator : MonoBehaviour
     [SerializeField] GameObject rightPage;
     [SerializeField] GameObject linePrefab;
 
-    public const int LETTERS_PER_LINE = 27;
+    public const int LETTERS_PER_LINE = 33; //27
     public const int LINES_PER_PAGE = 13;
 
     public int READING_LIMIT;
     public static int READING_COUNT;
+
+    public static int DAY = 7;
 
     bool complete = false;
 
@@ -28,56 +30,40 @@ public class BookGenerator : MonoBehaviour
 
         taskCompleter = GetComponent<TaskCompleter>();
 
-        List<string> lines = generateLines(Book.day1);
+        List<string> lines = generateLines(getDayString());
         Debug.Log("# of Lines: " + lines.Count);
 
         // Add line to left page
         for (int i = 0; i < LINES_PER_PAGE; i++)
         {
-            if (i < lines.Count)
+            GameObject line = Instantiate(linePrefab, leftPage.transform);
+            TextMeshProUGUI text = line.GetComponent<TextMeshProUGUI>();
+            text.SetText(i < lines.Count ? lines[i] : "");
+
+            if (text.text.Equals(""))
             {
-                GameObject line = Instantiate(linePrefab, leftPage.transform);
-                TextMeshProUGUI text = line.GetComponent<TextMeshProUGUI>();
-                text.SetText(lines[i]);
-                if (lines[i].Equals(""))
-                {
-                    text.color = LineClick.clicked;
-                }
-                else
-                {
-                    READING_LIMIT++;
-                }
-            } else
-            {
-                GameObject line = Instantiate(linePrefab, leftPage.transform);
-                TextMeshProUGUI text = line.GetComponent<TextMeshProUGUI>();
-                text.SetText("");
                 text.color = LineClick.clicked;
+            }
+            else
+            {
+                READING_LIMIT++;
             }
         }
 
         // Add line to right page
         for (int i = LINES_PER_PAGE; i < 2 * LINES_PER_PAGE; i++)
         {
-            if (i < lines.Count)
+            GameObject line = Instantiate(linePrefab, rightPage.transform);
+            TextMeshProUGUI text = line.GetComponent<TextMeshProUGUI>();
+            text.SetText(i < lines.Count ? lines[i] : "");
+
+            if (text.text.Equals(""))
             {
-                GameObject line = Instantiate(linePrefab, rightPage.transform);
-                TextMeshProUGUI text = line.GetComponent<TextMeshProUGUI>();
-                text.SetText(lines[i]);
-                if (lines[i].Equals(""))
-                {
-                    text.color = LineClick.clicked;
-                } else
-                {
-                    READING_LIMIT++;
-                }
+                text.color = LineClick.clicked;
             }
             else
             {
-                GameObject line = Instantiate(linePrefab, leftPage.transform);
-                TextMeshProUGUI text = line.GetComponent<TextMeshProUGUI>();
-                text.SetText("");
-                text.color = LineClick.clicked;
+                READING_LIMIT++;
             }
         }
 
@@ -130,5 +116,19 @@ public class BookGenerator : MonoBehaviour
         }
 
         return lines;
+    }
+
+    private string getDayString()
+    {
+        switch(DAY)
+        {
+            case 2: return Book.day2;
+            case 3: return Book.day3;
+            case 4: return Book.day4;
+            case 5: return Book.day5;
+            case 6: return Book.day6;
+            default: return "THE END";
+        }
+
     }
 }
