@@ -14,7 +14,7 @@ public class taskManager : MonoBehaviour
     [SerializeField]
     private SceneAsset failScene;
     [SerializeField]
-    private TextMeshProUGUI clock;
+    private GameObject[] clocks;
     [SerializeField]
     private TaskOptions[] requiredTasks;
     [SerializeField]
@@ -26,17 +26,23 @@ public class taskManager : MonoBehaviour
         Water,
         Fertilize,
         TillWeeds,
-        Clean,
+        CleanPlants,
         Read,
         Cook,
-        Socialize
+        Socialize,
+        CleanHouse
     }
 
     private void Update()
     {
         float time = PlayerPrefs.GetFloat(associatedScene.name + "-" + "time");
         time -= Time.deltaTime;
-        clock.text = ((int)time).ToString();
+        int timeRatio = (int)(clocks.Length * (1 - time / 120));
+        foreach (GameObject clock in clocks)
+        {
+            clock.SetActive(false);
+        }
+        clocks[timeRatio].SetActive(true);
         PlayerPrefs.SetFloat(associatedScene.name + "-" + "time", time);
 
         //level is over
