@@ -534,6 +534,7 @@ GameObject:
   - component: {fileID: 668161259}
   - component: {fileID: 668161261}
   - component: {fileID: 668161260}
+  - component: {fileID: 668161262}
   m_Layer: 0
   m_Name: Fertilizer
   m_TagString: Untagged
@@ -623,7 +624,7 @@ MonoBehaviour:
   START_POS: {x: 8.7, y: -3.22}
   fertilizingAnimation: {fileID: 8210033321990749680, guid: 6d63e80c6a0dfca4dbfe9abf7f9d12f2,
     type: 3}
-  plantCount: 5
+  plantCount: 4
 --- !u!50 &668161260
 Rigidbody2D:
   serializedVersion: 4
@@ -671,6 +672,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &668161262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668161256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7d4b781c228e804d936d6de54be60de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &855881835
 GameObject:
   m_ObjectHideFlags: 0

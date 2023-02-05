@@ -2981,7 +2981,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 0.00047745532}
+  m_BoundingSphereOverride: {x: 0, y: 0, z: 1.7e-44, w: 2.2680454}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -3786,7 +3786,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 0.00047745532}
+  m_BoundingSphereOverride: {x: 7.4e-43, y: 0, z: 3.455822e+30, w: 3.049315e-35}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -4329,7 +4329,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 0.00047745532}
+  m_BoundingSphereOverride: {x: 4.6304264e+27, y: 1.8017357e+25, z: 3.455822e+30,
+    w: 6.7421e+22}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -6090,7 +6091,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 0.00047745532}
+  m_BoundingSphereOverride: {x: 4.6304264e+27, y: 1.8017357e+25, z: 3.455822e+30,
+    w: 6.7421e+22}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -6489,7 +6491,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6629
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 0.00047745532}
+  m_BoundingSphereOverride: {x: 4.6304264e+27, y: 1.8017357e+25, z: 3.455822e+30,
+    w: 6.7421e+22}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -9372,7 +9375,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 4.6304264e+27, y: 1.8017357e+25, z: 3.455822e+30,
+    w: 6.7421e+22}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -10879,7 +10883,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 0.00047745532}
+  m_BoundingSphereOverride: {x: 4.6304264e+27, y: 1.8017357e+25, z: 3.455822e+30,
+    w: 6.7421e+22}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -13303,7 +13308,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Intensity: 9446.776
+  m_Intensity: 76606.79
   m_EnableSpotReflector: 1
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -13425,7 +13430,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 9446.776
+  m_Intensity: 76606.79
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -13470,7 +13475,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 20000
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 4.6304264e+27, y: 1.8017357e+25, z: 3.455822e+30,
+    w: 6.7421e+22}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -15145,7 +15151,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6629
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 0.00047745532}
+  m_BoundingSphereOverride: {x: 4.6304264e+27, y: 1.8017357e+25, z: 3.455822e+30,
+    w: 6.7421e+22}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -17170,7 +17177,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 3e-45, y: 0, z: 0, w: -2.0000002}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -19094,7 +19101,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 1
-  m_BoundingSphereOverride: {x: 1.02e-43, y: 1e-45, z: 6.3e-44, w: 3.435e-41}
+  m_BoundingSphereOverride: {x: 1.02e-43, y: 0, z: 0, w: 0.00047745532}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -19677,8 +19684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 480, y: 0}
-  m_SizeDelta: {x: -960, y: 1600}
+  m_AnchoredPosition: {x: 400, y: 0}
+  m_SizeDelta: {x: -800, y: 1600}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &2053326057
 MonoBehaviour:
@@ -19700,15 +19707,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Created By\t\t\t\t\tAndy Sharpe\r\n\t\t\t\t\t\tAndy Sliwa\r\n\t\t\t\t\t\tAnsh
-    A.\r\n\t\t\t\t\t\tWallace G.\r\n\r\nConcept\t\t\t\t\tAndy Sharpe\r\n\t\t\t\t\t\tAndy
-    Sliwa\r\n\t\t\t\t\t\tAnsh A.\r\n\t\t\t\t\t\tWallace G.\r\n\r\nScripter\t\t\t\t\tAndy
-    Sliwa\r\n\r\nLevel Designer\t\t\t\tAndy Sliwa\r\n\r\nPlanner\t\t\t\t\tAndy Sliwa\r\n\r\nProgrammers\t\t\t\tAndy
-    Sharpe\r\n\t\t\t\t\t\tAnsh A.\r\n\r\n2D Artist\t\t\t\t\tAndy Sliwa\r\n\r\n3D
-    Artist\t\t\t\t\tAndy Sliwa\r\nWallace G.\r\n\r\nTexture Artist\t\t\t\tAndy Sharpe\r\n\t\t\t\t\t\tWallace
-    G.\r\n\r\nAnimator\t\t\t\t\tAndy Sliwa\r\n\r\nRender Artist\t\t\t\tAndy Sharpe\r\n\n\r\nPlay
-    Tester\t\t\t\t\tAndy Sharpe\r\n\r\nAmbient audio: Song of Sadhana\r\t\t\t\t\t\tJesse
-    Gallagher\n\r\nOutro: Good Gig In the Clouds\t\tJoel Cummins"
+  m_text: "Created By\t\t\tAndy Sharpe\r\n\t\t\t\t\tAndy Sliwa\r\n\t\t\t\t\tAnsh
+    A.\r\n\t\t\t\t\tWallace G.\r\n\r\nConcept\t\t\t\tAndy Sharpe\r\n\t\t\t\t\tAndy
+    Sliwa\r\n\t\t\t\t\tAnsh A.\r\n\t\t\t\t\tWallace G.\r\n\r\nScripter\t\t\t\tAndy
+    Sliwa\r\n\r\nLevel Designer\t\t\tAndy Sliwa\r\n\r\nPlanner\t\t\t\tAndy Sliwa\r\n\r\nProgrammers\t\t\tAndy
+    Sharpe\r\n\t\t\t\t\tAnsh A.\r\n\r\n2D Artist\t\t\t\tAndy Sliwa\r\n\r\n3D Artist\t\t\t\tAndy
+    Sliwa\r\nWallace G.\r\n\r\nTexture Artist\t\t\tAndy Sharpe\r\n\t\t\t\t\tWallace
+    G.\r\n\r\nAnimator\t\t\t\tAndy Sliwa\r\n\r\nRender Artist\t\t\tAndy Sharpe\r\n\n\r\nPlay
+    Tester\t\t\tAndy Sharpe\r\n\r\nAmbient audio: Song of Sadhana\r\n\t\t\t\t\tJesse
+    Gallagher\n\r\nOutro: Good Gig In the Clouds\n\t\t\t\t\tJoel Cummins"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -19735,13 +19742,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 48
+  m_fontSizeBase: 48
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
