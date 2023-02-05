@@ -18,7 +18,7 @@ public class BookGenerator : MonoBehaviour
     public int READING_LIMIT;
     public static int READING_COUNT;
 
-    public static int DAY = 7;
+    public int DAY = 2;
 
     bool complete = false;
 
