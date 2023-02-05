@@ -128,6 +128,11 @@ public class taskManager : MonoBehaviour
 
     private float optionalDoneRatio()
     {
+        if (optionalTasks.Length == 0)
+        {
+            return 1;
+        }
+        
         int doneCount = 0;
         foreach (TaskOptions task in optionalTasks)
         {
