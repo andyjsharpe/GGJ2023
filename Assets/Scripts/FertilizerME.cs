@@ -6,6 +6,9 @@ public class FertilizerME : MonoBehaviour
 {
     // Variables
     [SerializeField] float fertilized = 0.0f;
+    [SerializeField] Sprite unMixed;
+    [SerializeField] Sprite Mixed;
+
     public bool fertilizing = false;
     bool complete = false;
 
@@ -16,7 +19,6 @@ public class FertilizerME : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -35,7 +37,8 @@ public class FertilizerME : MonoBehaviour
 
                     // Temporarily, change sprite tint
                     SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-                    renderer.color = Color.gray;
+                    //renderer.color = Color.gray;
+                    renderer.sprite = Mixed;
                 }
             }
         }
@@ -60,5 +63,12 @@ public class FertilizerME : MonoBehaviour
             this.fertilized += magnitude * FertilizingTask.FERTILIZING_RATE;
         }
 
+    }
+
+    public void readyToMix()
+    {
+        SpriteRenderer temp = this.GetComponent<SpriteRenderer>();
+        temp.sprite = unMixed;
+        temp.color = Color.white;
     }
 }
