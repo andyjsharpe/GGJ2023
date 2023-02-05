@@ -685,7 +685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textField: {fileID: 0}
   lvlManger: {fileID: 0}
-  toChangeTo: {fileID: 102900000, guid: 443394efaef96f740ba6c6a397a37420, type: 3}
+  toChangeTo: 1
   levelNum: 0
 --- !u!1 &1768009387
 GameObject:
