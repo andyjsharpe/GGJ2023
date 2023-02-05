@@ -6,6 +6,8 @@ public class FertilizingTask : MonoBehaviour
 {
     // Variables & Fields
     public static int FERTILIZED_COUNT = 0;
+    public static float FERTILIZED_LIMIT = 100;
+    public static float FERTILIZING_RATE = 2;
 
     [SerializeField] Vector2 START_POS;
 
@@ -13,7 +15,6 @@ public class FertilizingTask : MonoBehaviour
     private Vector3 screenPoint;
     private Vector3 offset;
     [SerializeField] int plantCount;
-    bool lockReady = false;
 
     GameObject lockPlant;
 
@@ -40,8 +41,6 @@ public class FertilizingTask : MonoBehaviour
         if (other.tag == "Plant")
         {
             FertilizerME fertilizeStatus = other.GetComponent<FertilizerME>();
-            fertilizeStatus.fertilizing = true;
-            lockReady = true;
             lockPlant = other;
         }
     }
@@ -52,9 +51,7 @@ public class FertilizingTask : MonoBehaviour
         if (other.tag == "Plant")
         {
             FertilizerME fertilizeStatus = other.GetComponent<FertilizerME>();
-            lockReady = false;
-            lockPlant = other;
-            
+            lockPlant = null;
         }
     }
 
@@ -74,11 +71,11 @@ public class FertilizingTask : MonoBehaviour
     }
     void OnMouseUp()
     {
-        if (lockReady)
+        if (lockPlant != null)
         {
             //TODO: Switch to Animation of bag
-            Transform toLock = lockPlant.GetComponentInChildren<Transform>();
-            this.transform.position = toLock.position;
+            this.transform.position = lockPlant.transform.position;
+            lockPlant.GetComponent<FertilizerME>().fertilizing = true;
         } else
         {
             ResetPosition();
