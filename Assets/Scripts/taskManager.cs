@@ -14,6 +14,8 @@ public class taskManager : MonoBehaviour
     [SerializeField]
     private SceneAsset failScene;
     [SerializeField]
+    private SceneAsset winScene;
+    [SerializeField]
     private GameObject[] clocks;
     [SerializeField]
     private TaskOptions[] requiredTasks;
@@ -88,8 +90,10 @@ public class taskManager : MonoBehaviour
         //clear the playerprefs in the next level
         clearNextLevel();
 
+        PlayerPrefs.SetInt("toReturnTo", SceneManager.GetSceneByName(nextScene.name).buildIndex);
+
         //open next scene
-        SceneManager.LoadScene(nextScene.name);
+        SceneManager.LoadScene(winScene.name);
     }
 
     private bool requiredDone()
