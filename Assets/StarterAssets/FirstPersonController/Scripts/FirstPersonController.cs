@@ -108,6 +108,10 @@ namespace StarterAssets
 			// reset our timeouts on start
 			_jumpTimeoutDelta = JumpTimeout;
 			_fallTimeoutDelta = FallTimeout;
+
+			//lock and hide mouse
+			Cursor.lockState= CursorLockMode.Locked;
+			Cursor.visible= false;
 		}
 
 		private void Update()

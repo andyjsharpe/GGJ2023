@@ -7,10 +7,8 @@ using UnityEngine.Rendering.HighDefinition;
 
 public class sanity : MonoBehaviour
 {
-    [SerializeField]
+    private float sanityTarget;
     private float sanityVal = 0;    //0 = "full", higher values are more "insane"
-    public float sanityTarget = 0;
-    [SerializeField]
     private float randVal = 0;
     private Volume mainVol;
     private VolumeProfile profile;
@@ -21,6 +19,8 @@ public class sanity : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        sanityTarget = PlayerPrefs.GetFloat("sanityTarget");
+
         mainVol = GetComponent<Volume>();
 
         profile = mainVol.profile;
@@ -41,7 +41,7 @@ public class sanity : MonoBehaviour
     private void Update()
     {
         sanityVal = Mathf.Lerp(sanityVal, sanityTarget, Time.deltaTime / 4);    //interpolate to the target value smoothly
-        randVal += Random.Range(0.0f, 1) * sanityVal * sanityVal * Time.deltaTime * 2.0f * Mathf.PI;
+        randVal += Random.Range(0.0f, 1.0f) * sanityVal * sanityVal * Time.deltaTime * 2.0f * Mathf.PI;
         SetComps();
     }
 
