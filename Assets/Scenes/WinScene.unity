@@ -343,7 +343,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &914551489
 RectTransform:
   m_ObjectHideFlags: 0
@@ -860,8 +860,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2073832200}
-        m_TargetAssemblyTypeName: levelReturner, Assembly-CSharp
-        m_MethodName: returnToSavedLevel
+        m_TargetAssemblyTypeName: LevelAdvancer, Assembly-CSharp
+        m_MethodName: goToSavedLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -918,7 +918,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2073832195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7254fbd5d1007a54cb4baf656f4d2baa, type: 3}
+  m_Script: {fileID: 11500000, guid: 1572d03d5a659ce45ac664366f83fecd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2104136405

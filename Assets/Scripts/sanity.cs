@@ -15,11 +15,18 @@ public class sanity : MonoBehaviour
     private Vignette vignetteComp;
     private LensDistortion lensDistortionComp;
     private ChromaticAberration chromaticAberrationComp;
+    [SerializeField]
+    private bool isFinal = false;
     
     // Start is called before the first frame update
     void Start()
     {
         sanityTarget = PlayerPrefs.GetFloat("sanityTarget");
+
+        if (isFinal)
+        {
+            sanityTarget = 0.5f;
+        }
 
         mainVol = GetComponent<Volume>();
 

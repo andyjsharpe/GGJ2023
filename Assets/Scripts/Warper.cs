@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Warper : MonoBehaviour
 {
     [SerializeField]
-    private SceneAsset toWarpTo;
+    private int toWarpTo;
 
     public void doWarp()
     {
@@ -16,6 +16,6 @@ public class Warper : MonoBehaviour
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
 
-        SceneManager.LoadScene(toWarpTo.name);
+        SceneManager.LoadScene(toWarpTo);
     }
 }

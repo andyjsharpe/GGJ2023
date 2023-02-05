@@ -14,6 +14,7 @@ public class FertilizingTask : MonoBehaviour
     // Private Variables
     private Vector3 screenPoint;
     private Vector3 offset;
+    [SerializeField] GameObject fertilizingAnimation;
     [SerializeField] int plantCount;
 
     GameObject lockPlant;
@@ -79,12 +80,15 @@ public class FertilizingTask : MonoBehaviour
         if (lockPlant != null)
         {
             //TODO: Switch to Animation of bag
-            this.transform.position = lockPlant.transform.position;
+            //this.transform.position = lockPlant.transform.position;
+
+            GameObject temp = Instantiate(fertilizingAnimation, lockPlant.transform.position - new Vector3(-.3f, -.3f), Quaternion.identity);
             lockPlant.GetComponent<FertilizerME>().fertilizing = true;
-        } else
-        {
-            ResetPosition();
+            lockPlant.GetComponent<FertilizerME>().readyToMix();
+
+            Destroy(temp, 0.5f);
         }
+        ResetPosition();
 
         // Reset position once animation ends;
         

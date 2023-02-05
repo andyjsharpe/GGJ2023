@@ -11,7 +11,7 @@ public class LevelMenuManager : MonoBehaviour
     // Misc Variables
     public static Color lvlColor = Color.white;
     public static string LEVEL_REACHED_KEY = "temp";
-    public SceneAsset[] mainScenes;
+    public int[] mainScenes;
     int LEVEL_REACHED = 0;
 
 

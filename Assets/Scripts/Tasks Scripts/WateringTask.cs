@@ -10,6 +10,8 @@ public class WateringTask : MonoBehaviour
     public static int WATERED_COUNT = 0;
 
     [SerializeField] Vector2 START_POS;
+    [SerializeField] Animator animator;
+    [SerializeField] Sprite defaultState;
 
     // Private Variables
     private Vector3 screenPoint;
@@ -21,7 +23,9 @@ public class WateringTask : MonoBehaviour
     void Start()
     {
         taskCompleter = GetComponent<TaskCompleter>();
-        
+        animator.enabled = false;
+        this.GetComponent<SpriteRenderer>().sprite = defaultState;
+
         // Set Position of Watering Can
         ResetPosition();
     }
@@ -44,6 +48,7 @@ public class WateringTask : MonoBehaviour
         {
             WaterME waterStatus = other.GetComponent<WaterME>();
             waterStatus.watering = true;
+            animator.enabled = true;
         }
     }
 
@@ -54,6 +59,8 @@ public class WateringTask : MonoBehaviour
         {
             WaterME waterStatus = other.GetComponent<WaterME>();
             waterStatus.watering = false;
+            animator.enabled = false;
+            this.GetComponent<SpriteRenderer>().sprite = defaultState;
         }
     }
 
