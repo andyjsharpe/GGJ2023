@@ -2681,6 +2681,11 @@ PrefabInstance:
       propertyPath: m_BakedTexture
       value: 
       objectReference: {fileID: 8900000, guid: cbe4cba9daaab764a9c8fdce27e4d8e3, type: 3}
+    - target: {fileID: 7306416374335238471, guid: 3db4ef7cd0e88644d877a34c11e89483,
+        type: 3}
+      propertyPath: m_BakedTexture
+      value: 
+      objectReference: {fileID: 8900000, guid: 9d9abeb4ce1418b49a05466b7f07b25e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db4ef7cd0e88644d877a34c11e89483, type: 3}
 --- !u!1 &301951521 stripped
@@ -8177,6 +8182,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2c325011613ab04ea364caf1915655c, type: 3}
+--- !u!1 &813477544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5100783378275977516, guid: 3db4ef7cd0e88644d877a34c11e89483,
+    type: 3}
+  m_PrefabInstance: {fileID: 301951520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &818412123
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15227,6 +15238,9 @@ MonoBehaviour:
   - id: 8
     category: 0
     gameObject: {fileID: 301951521}
+  - id: 9
+    category: 0
+    gameObject: {fileID: 813477544}
 --- !u!4 &1569314647
 Transform:
   m_ObjectHideFlags: 19
