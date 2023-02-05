@@ -128,7 +128,10 @@ public class taskManager : MonoBehaviour
 
     public bool isTaskDone(TaskOptions option)
     {
-        return PlayerPrefs.GetInt(associatedScene.name + "-" + option.ToString()) == 1;
+        string lookup = associatedScene.name + "-" + option.ToString();
+        bool check = PlayerPrefs.GetInt(lookup) == 1;
+        //Debug.Log(lookup + " returns: " + check.ToString());
+        return check;
     }
 
     //clears all tasks in the next level

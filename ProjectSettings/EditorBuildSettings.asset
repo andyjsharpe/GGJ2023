@@ -20,6 +20,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/House1.unity
     guid: 443394efaef96f740ba6c6a397a37420
+  - enabled: 1
+    path: Assets/Scenes/SmudgeCleaning.unity
+    guid: 227cd632ce866f24c93f86d53c3314f1
+  - enabled: 1
+    path: Assets/Scenes/WateringPlant.unity
+    guid: ac4c0ed7b665ec6448ff411af4a5e617
+  - enabled: 1
+    path: Assets/Scenes/RemovingWeeds.unity
+    guid: 0d5d8e00b24bcb94a949f9728cd72689
+  - enabled: 1
+    path: Assets/Scenes/Fertalizing.unity
+    guid: 58343bfdbbf6d6042ae9a76a04f330e0
+  - enabled: 1
+    path: Assets/Scenes/ReadingBook.unity
+    guid: 5176e7d6de120b4489aae49a7a909936
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9e7be553448fa2546aea5752021cbcf7,
       type: 2}
