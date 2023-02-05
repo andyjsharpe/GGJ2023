@@ -260,8 +260,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.3132, y: 46.4715}
-  m_SizeDelta: {x: 451.5271, y: 459.3234}
+  m_AnchoredPosition: {x: -40.1222, y: 3.8134}
+  m_SizeDelta: {x: 413.5014, y: 430.3514}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &123017927
 MonoBehaviour:
@@ -279,7 +279,7 @@ MonoBehaviour:
   smudgePrefab: {fileID: 4060737163873261844, guid: ab935353059cf254589df681d8251af4,
     type: 3}
   count: 10
-  smudgeSpriteLocation: smudges-1
+  smudgeSpriteLocation: Smudge_Overlay
 --- !u!114 &123017928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -837,8 +837,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -0.0000019073}
-  m_SizeDelta: {x: 1208.4966, y: 994.68}
+  m_AnchoredPosition: {x: -0.0070610046, y: -14.2193}
+  m_SizeDelta: {x: 1920, y: 1129.7634}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1624059373
 MonoBehaviour:
@@ -860,7 +860,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 2ead80f91e2698a42ab4d58b35e33540, type: 3}
+  m_Texture: {fileID: 2800000, guid: 7e3f4a614c060244291e4142b5b46ffe, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0

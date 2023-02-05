@@ -6,13 +6,14 @@ public class WaterME : MonoBehaviour
 {
     // Variables
     [SerializeField] float watered = 0.0f;
+    [SerializeField] GameObject wateredState;
     public bool watering = false;
     bool complete = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        wateredState.SetActive(false);
     }
 
     // Update is called once per frame
@@ -33,9 +34,12 @@ public class WaterME : MonoBehaviour
                     complete = true;
                     WateringTask.WATERED_COUNT++;
 
-                    // Temporarily, change sprite tint
+                    /*// Temporarily, change sprite tint
                     SpriteRenderer renderer = GetComponent<SpriteRenderer>();
-                    renderer.color = Color.yellow;
+                    renderer.color = Color.yellow;*/
+
+                    // Show watered state
+                    wateredState.SetActive(true);
                 }
             }
         }
