@@ -68,9 +68,10 @@ public class taskManager : MonoBehaviour
 
     public int getSceneIndexFromName(SceneAsset scene)
     {
-        string scenePath = SceneManager.GetSceneByName(scene.name).path;
-        int buildIndex = SceneUtility.GetBuildIndexByScenePath(scenePath);
-        
+        int buildIndex = SceneManager.GetSceneByName(scene.name).buildIndex;
+
+        //string scenePath = SceneManager.GetSceneByName(scene.name).path;
+        //int buildIndex = SceneUtility.GetBuildIndexByScenePath(scenePath);
 
         return buildIndex;
     }
@@ -107,7 +108,7 @@ public class taskManager : MonoBehaviour
         //clear the playerprefs in the next level
         clearNextLevel();
 
-        PlayerPrefs.SetInt("toReturnTo", getSceneIndexFromName(nextScene));
+        PlayerPrefs.SetString("toReturnToS", nextScene.name);
 
         //open next scene
         SceneManager.LoadScene(winScene.name);

@@ -4679,7 +4679,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &454679103
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5707,7 +5707,7 @@ MonoBehaviour:
   - {fileID: 146157019}
   - {fileID: 714429863}
   requiredTasks: 01000000020000000400000005000000
-  optionalTasks: 0600000007000000
+  optionalTasks: 07000000
   levelNum: 4
 --- !u!1001 &618409799
 PrefabInstance:
