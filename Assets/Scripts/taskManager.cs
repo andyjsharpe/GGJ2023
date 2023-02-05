@@ -21,6 +21,8 @@ public class taskManager : MonoBehaviour
     private TaskOptions[] requiredTasks;
     [SerializeField]
     private TaskOptions[] optionalTasks;
+    [SerializeField]
+    private int levelNum = 1;
 
     public enum TaskOptions
     {
@@ -33,6 +35,11 @@ public class taskManager : MonoBehaviour
         Cook,   //In progress
         Socialize,  //In progress
         CleanHouse  //In progress
+    }
+
+    private void Start()
+    {
+        PlayerPrefs.SetInt(LevelMenuManager.LEVEL_REACHED_KEY, levelNum);
     }
 
     private void Update()
