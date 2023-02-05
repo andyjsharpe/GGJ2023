@@ -23,21 +23,22 @@ public class taskManager : MonoBehaviour
     public enum TaskOptions
     {
         None,
-        Water,
-        Fertilize,
-        TillWeeds,
-        CleanPlants,
-        Read,
-        Cook,
-        Socialize,
-        CleanHouse
+        Water,  //Done
+        Fertilize,  //Done
+        TillWeeds,  //Done
+        CleanPlants,    //Done
+        Read,   //Done
+        Cook,   //In progress
+        Socialize,  //In progress
+        CleanHouse  //In progress
     }
 
     private void Update()
     {
         float time = PlayerPrefs.GetFloat(associatedScene.name + "-" + "time");
         time -= Time.deltaTime;
-        int timeRatio = (int)(clocks.Length * (1 - time / 120));
+        float doneRatio = 1 - time / 120;
+        int timeRatio = (int)(Mathf.Min(clocks.Length * doneRatio, clocks.Length - 1));
         foreach (GameObject clock in clocks)
         {
             clock.SetActive(false);
@@ -59,10 +60,16 @@ public class taskManager : MonoBehaviour
     {
         //reset timer
         PlayerPrefs.SetFloat(associatedScene.name + "-" + "time", 120);
+        float sanityTarget = PlayerPrefs.GetFloat("sanityTarget");
 
         //if level not completed 
         if (!requiredDone())
         {
+            //increase sanity by 1/6
+            sanityTarget += 1 / 6.0f;
+            sanityTarget = Mathf.Min(sanityTarget, 1);
+            PlayerPrefs.SetFloat("sanityTarget", sanityTarget);
+
             //clear the playerprefs in this level
             clearThisLevel();
             PlayerPrefs.SetInt("toReturnTo", SceneManager.GetActiveScene().buildIndex);
@@ -70,10 +77,10 @@ public class taskManager : MonoBehaviour
             SceneManager.LoadScene(failScene.name);
             return;
         }
-        
+
         //increase sanity based on number of optional tasks done
-        float sanityTarget = PlayerPrefs.GetFloat("sanityTarget");
-        sanityTarget += Mathf.Min((1 - optionalDoneRatio())/6.0f, 1.0f); //makes it so if no optional tasks are done, sanity will rech last by the last level
+        sanityTarget += (1 - optionalDoneRatio()) / 6.0f; //makes it so if no optional tasks are done, sanity will reach last by the last level
+        sanityTarget = Mathf.Min(sanityTarget, 1);
         PlayerPrefs.SetFloat("sanityTarget", sanityTarget);
 
         //clear the playerprefs in this level
