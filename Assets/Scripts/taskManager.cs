@@ -37,7 +37,8 @@ public class taskManager : MonoBehaviour
     {
         float time = PlayerPrefs.GetFloat(associatedScene.name + "-" + "time");
         time -= Time.deltaTime;
-        int timeRatio = (int)(clocks.Length * (1 - time / 120));
+        float doneRatio = 1 - time / 120;
+        int timeRatio = (int)(Mathf.Min(clocks.Length * doneRatio, clocks.Length - 1));
         foreach (GameObject clock in clocks)
         {
             clock.SetActive(false);
