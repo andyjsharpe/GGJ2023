@@ -13,7 +13,18 @@ public class TaskCompleter : MonoBehaviour
 
         return sceneName;
     }
-    
+
+    public void completeTaskNoLoad(taskManager.TaskOptions option)
+    {
+        int parentSceneid = PlayerPrefs.GetInt("toReturnTo");
+        string parentName = getSceneNameFromIndex(parentSceneid);
+
+        string lookup = parentName + "-" + option.ToString();
+        PlayerPrefs.SetInt(lookup, 1);
+
+        Debug.Log(lookup + " set to 1");
+    }
+
     public void completeTask(taskManager.TaskOptions option)
     {
         int parentSceneid = PlayerPrefs.GetInt("toReturnTo");

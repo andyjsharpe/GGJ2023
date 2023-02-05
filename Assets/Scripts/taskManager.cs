@@ -105,7 +105,7 @@ public class taskManager : MonoBehaviour
 
     private bool requiredDone()
     {
-        foreach (taskManager.TaskOptions task in requiredTasks)
+        foreach (TaskOptions task in requiredTasks)
         {
             if (!isTaskDone(task))
             {
@@ -118,7 +118,7 @@ public class taskManager : MonoBehaviour
     private float optionalDoneRatio()
     {
         int doneCount = 0;
-        foreach (taskManager.TaskOptions task in optionalTasks)
+        foreach (TaskOptions task in optionalTasks)
         {
             if (isTaskDone(task))
             {

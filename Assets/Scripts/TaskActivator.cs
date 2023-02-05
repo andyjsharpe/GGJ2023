@@ -9,11 +9,17 @@ public class TaskActivator : MonoBehaviour
     private taskManager.TaskOptions task;
     [SerializeField]
     private UnityEvent activatetEvent;
+    private taskManager manager;
 
     // Start is called before the first frame update
     void Start()
     {
-        taskManager manager = FindObjectOfType<taskManager>();
+        manager = FindObjectOfType<taskManager>();
+        recalcTasks();
+    }
+
+    public void recalcTasks()
+    {
         if (manager.isTaskDone(task))
         {
             activatetEvent.Invoke();
