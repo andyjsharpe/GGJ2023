@@ -15,10 +15,13 @@ public class WateringTask : MonoBehaviour
     private Vector3 screenPoint;
     private Vector3 offset;
     [SerializeField] int plantCount; 
+    private TaskCompleter taskCompleter;
 
     // Start is called before the first frame update
     void Start()
     {
+        taskCompleter = GetComponent<TaskCompleter>();
+        
         // Set Position of Watering Can
         ResetPosition();
     }
@@ -29,6 +32,7 @@ public class WateringTask : MonoBehaviour
         if(plantCount == WATERED_COUNT)
         {
             Debug.Log("TASK COMPLETE");
+            taskCompleter.completeTask(taskManager.TaskOptions.Water); //This completes the "Water" task
         }
     }
 

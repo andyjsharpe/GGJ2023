@@ -13,9 +13,14 @@ public class RemovingTask : MonoBehaviour
     [SerializeField] RectTransform spawnArea;
     bool complete = false;
 
+    private TaskCompleter taskCompleter;
+
     // Start is called before the first frame update
     void Start()
     {
+        
+        taskCompleter = GetComponent<TaskCompleter>();
+
         for (int i = 0; i < count; i++)
         {
             // Randomize Spawn Location
@@ -38,6 +43,7 @@ public class RemovingTask : MonoBehaviour
         {
             complete = true;
             Debug.Log("TASK COMPLETE!");
+            taskCompleter.completeTask(taskManager.TaskOptions.TillWeeds); //This completes the "TillWeeds" task
         }
     }
 }

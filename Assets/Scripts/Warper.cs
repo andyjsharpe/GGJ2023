@@ -12,6 +12,10 @@ public class Warper : MonoBehaviour
     public void doWarp()
     {
         PlayerPrefs.SetInt("toReturnTo", SceneManager.GetActiveScene().buildIndex);
+
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Confined;
+
         SceneManager.LoadScene(toWarpTo.name);
     }
 }

@@ -19,13 +19,15 @@ public class BookGenerator : MonoBehaviour
     public static int READING_COUNT;
 
     bool complete = false;
-    
 
+    private TaskCompleter taskCompleter;
 
     // Start is called before the first frame update
-
     void Start()
     {
+
+        taskCompleter = GetComponent<TaskCompleter>();
+
         List<string> lines = generateLines(Book.day1);
         Debug.Log("# of Lines: " + lines.Count);
 
@@ -88,7 +90,7 @@ public class BookGenerator : MonoBehaviour
         {
             complete = true;
             Debug.Log("TASK COMPLETED!");
-
+            taskCompleter.completeTask(taskManager.TaskOptions.Read); //This completes the "Read" task
         }
     }
 

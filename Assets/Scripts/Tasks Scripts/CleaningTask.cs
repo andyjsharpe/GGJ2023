@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.XR.Oculus.Input;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +13,13 @@ public class CleaningTask : MonoBehaviour
 
     [SerializeField] string smudgeSpriteLocation;
 
+    private TaskCompleter taskCompleter;
+
     // Start is called before the first frame update
     void Start()
     {
+        taskCompleter = GetComponent<TaskCompleter>();
+        
         // Load Smudge Sprites
         Sprite[] smudgeSprites = Resources.LoadAll<Sprite>(smudgeSpriteLocation);
 
@@ -51,6 +56,11 @@ public class CleaningTask : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //I assumed that this is how you would check completion, but be sure to change if that is not the case
+        if (FindObjectsOfType<Destory>().Length == 0)   //since all smudge objects have a destroy script, we can assume that if the num = 0, they have been all cleaned
+        {
+            Debug.Log("TASK COMPLETE");
+            taskCompleter.completeTask(taskManager.TaskOptions.CleanPlants); //This completes the "CleanPlants" task
+        }
     }
 }

@@ -18,9 +18,13 @@ public class FertilizingTask : MonoBehaviour
 
     GameObject lockPlant;
 
+    private TaskCompleter taskCompleter;
+
     // Start is called before the first frame update
     void Start()
     {
+        taskCompleter = GetComponent<TaskCompleter>();
+
         // Set Position of Watering Can
         ResetPosition();
     }
@@ -31,6 +35,7 @@ public class FertilizingTask : MonoBehaviour
         if (plantCount == FERTILIZED_COUNT)
         {
             Debug.Log("TASK COMPLETE");
+            taskCompleter.completeTask(taskManager.TaskOptions.Fertilize); //This completes the "Fertilize" task
         }
     }
 
