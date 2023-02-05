@@ -76,6 +76,7 @@ public class BookGenerator : MonoBehaviour
         {
             complete = true;
             Debug.Log("TASK COMPLETED!");
+            DAY++;
             taskCompleter.completeTask(taskManager.TaskOptions.Read); //This completes the "Read" task
         }
     }

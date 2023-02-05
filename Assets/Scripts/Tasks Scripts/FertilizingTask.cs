@@ -36,6 +36,7 @@ public class FertilizingTask : MonoBehaviour
         if (plantCount == FERTILIZED_COUNT)
         {
             Debug.Log("TASK COMPLETE");
+            FERTILIZED_COUNT = 0;
             taskCompleter.completeTask(taskManager.TaskOptions.Fertilize); //This completes the "Fertilize" task
         }
     }
