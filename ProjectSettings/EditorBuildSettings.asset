@@ -21,6 +21,24 @@ EditorBuildSettings:
     path: Assets/Scenes/House1.unity
     guid: 443394efaef96f740ba6c6a397a37420
   - enabled: 1
+    path: Assets/Scenes/House2.unity
+    guid: 4bcab37d4f7feaf4cb77de1702b942db
+  - enabled: 1
+    path: Assets/Scenes/House3.unity
+    guid: 5e926cbf815415848b205e9d77f6a31b
+  - enabled: 1
+    path: Assets/Scenes/House4.unity
+    guid: 808695b8fc5a07e4c9e20d038c140bbc
+  - enabled: 1
+    path: Assets/Scenes/House5.unity
+    guid: 27f788e078b69254d880bcfa034918e8
+  - enabled: 1
+    path: Assets/Scenes/House6.unity
+    guid: 876644098803db045ac136bc7cba23ba
+  - enabled: 1
+    path: Assets/Scenes/House7.unity
+    guid: 9ff2b94837760bb4d989841d37df03d4
+  - enabled: 1
     path: Assets/Scenes/SmudgeCleaning.unity
     guid: 227cd632ce866f24c93f86d53c3314f1
   - enabled: 1

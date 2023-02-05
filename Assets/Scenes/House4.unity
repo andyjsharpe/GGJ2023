@@ -3397,7 +3397,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &377286118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5734,8 +5734,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35cf4df33d0517c4d9f710cd5e03be67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  associatedScene: {fileID: 102900000, guid: 443394efaef96f740ba6c6a397a37420, type: 3}
-  nextScene: {fileID: 102900000, guid: 4bcab37d4f7feaf4cb77de1702b942db, type: 3}
+  associatedScene: {fileID: 102900000, guid: 808695b8fc5a07e4c9e20d038c140bbc, type: 3}
+  nextScene: {fileID: 102900000, guid: 27f788e078b69254d880bcfa034918e8, type: 3}
   failScene: {fileID: 102900000, guid: fc5d290e09e53f14a89984640ff609e6, type: 3}
   winScene: {fileID: 102900000, guid: a4301f2a5c8a8164b90b75608cea02f3, type: 3}
   clocks:
@@ -5753,9 +5753,9 @@ MonoBehaviour:
   - {fileID: 1295987348}
   - {fileID: 146157019}
   - {fileID: 714429863}
-  requiredTasks: 04000000
+  requiredTasks: 01000000020000000400000005000000
   optionalTasks: 0600000007000000
-  levelNum: 1
+  levelNum: 4
 --- !u!1001 &618409799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11662,7 +11662,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1219140301
 RectTransform:
   m_ObjectHideFlags: 0
@@ -19927,7 +19927,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2114629162
 RectTransform:
   m_ObjectHideFlags: 0

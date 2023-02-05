@@ -34,7 +34,7 @@ public class taskManager : MonoBehaviour
         Read,   //Done
         Cook,   //In progress
         Socialize,  //In progress
-        CleanHouse  //In progress
+        CheckRoom  //In progress
     }
 
     private void Start()
