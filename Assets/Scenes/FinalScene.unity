@@ -2584,6 +2584,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4636650fc592e63478b29ff7606f0838, type: 3}
+--- !u!1 &297133021 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5100783378275977516, guid: 3db4ef7cd0e88644d877a34c11e89483,
+    type: 3}
+  m_PrefabInstance: {fileID: 301951520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &301951520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2655,37 +2661,52 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: 9c4e872b42517474a8ca5ab9e6c480e1, type: 3}
+      objectReference: {fileID: 8900000, guid: 4489648dfae1b0a43b562e84235aa4e9, type: 3}
+    - target: {fileID: 3381852198479399272, guid: 3db4ef7cd0e88644d877a34c11e89483,
+        type: 3}
+      propertyPath: m_BakedTexture
+      value: 
+      objectReference: {fileID: 8900000, guid: 53ab77879ef766345969631bcf1537a0, type: 3}
     - target: {fileID: 3381852198509504714, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: ebf4269b79f6bb742a9d60218ae42289, type: 3}
+      objectReference: {fileID: 8900000, guid: 952c6f17947a0d24fbbacf34a914f820, type: 3}
     - target: {fileID: 3381852198511578876, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: 4177a2b6017e8704b9ccf15e12ec8d05, type: 3}
+      objectReference: {fileID: 8900000, guid: 75216b669dfee5847b4d93dbeda7c905, type: 3}
+    - target: {fileID: 3381852198532055535, guid: 3db4ef7cd0e88644d877a34c11e89483,
+        type: 3}
+      propertyPath: m_BakedTexture
+      value: 
+      objectReference: {fileID: 8900000, guid: 32d8765cbef38c7409e808c029c30936, type: 3}
     - target: {fileID: 3381852199089004035, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: 49d141cb78abb3d47af17ea5ab668a83, type: 3}
+      objectReference: {fileID: 8900000, guid: 83a517a681c43f84cbe75fd7a0f7354c, type: 3}
     - target: {fileID: 3381852199221573176, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: f5c16bed17b40774a8031120f975629f, type: 3}
+      objectReference: {fileID: 8900000, guid: 37b4b2f06a6688d4f94894a197ecbb70, type: 3}
     - target: {fileID: 3381852199225730406, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: 5474f30918ef48142abb4671f9492857, type: 3}
+      objectReference: {fileID: 8900000, guid: 44b1d8da2106718438b7ef02f15f2f2c, type: 3}
     - target: {fileID: 3381852199384648518, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: cbe4cba9daaab764a9c8fdce27e4d8e3, type: 3}
+      objectReference: {fileID: 8900000, guid: 6d1de9a913664344f96d2ee7b71548b9, type: 3}
+    - target: {fileID: 7306416374335238471, guid: 3db4ef7cd0e88644d877a34c11e89483,
+        type: 3}
+      propertyPath: m_BakedTexture
+      value: 
+      objectReference: {fileID: 8900000, guid: 72bf6623c5c2d1e43bf7eb5d9d7c632a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db4ef7cd0e88644d877a34c11e89483, type: 3}
 --- !u!1 &301951521 stripped
@@ -15198,6 +15219,9 @@ MonoBehaviour:
   - id: 8
     category: 0
     gameObject: {fileID: 301951521}
+  - id: 9
+    category: 0
+    gameObject: {fileID: 297133021}
 --- !u!4 &1569314647
 Transform:
   m_ObjectHideFlags: 19
@@ -19682,8 +19706,9 @@ MonoBehaviour:
     Sliwa\r\n\r\nLevel Designer\t\t\t\tAndy Sliwa\r\n\r\nPlanner\t\t\t\t\tAndy Sliwa\r\n\r\nProgrammers\t\t\t\tAndy
     Sharpe\r\n\t\t\t\t\t\tAnsh A.\r\n\r\n2D Artist\t\t\t\t\tAndy Sliwa\r\n\r\n3D
     Artist\t\t\t\t\tAndy Sliwa\r\nWallace G.\r\n\r\nTexture Artist\t\t\t\tAndy Sharpe\r\n\t\t\t\t\t\tWallace
-    G.\r\n\r\nAnimator\t\t\t\t\tAndy Sliwa\r\n\r\nRender Artist\t\t\t\tAndy Sharpe\r\n\r\nAudio
-    Credit\t\t\t\tJoel Cummins\n\r\nPlay Tester\t\t\t\t\tAndy Sharpe\r\n\r\n\t\t\t\t\t\t\r\n"
+    G.\r\n\r\nAnimator\t\t\t\t\tAndy Sliwa\r\n\r\nRender Artist\t\t\t\tAndy Sharpe\r\n\n\r\nPlay
+    Tester\t\t\t\t\tAndy Sharpe\r\n\r\nAmbient audio: Song of Sadhana\r\t\t\t\t\t\tJesse
+    Gallagher\n\r\nOutro: Good Gig In the Clouds\t\tJoel Cummins"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -2655,37 +2655,52 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: 9c4e872b42517474a8ca5ab9e6c480e1, type: 3}
+      objectReference: {fileID: 8900000, guid: 2e86d322bc1d97b48b5fe5dd7c9b9c5c, type: 3}
+    - target: {fileID: 3381852198479399272, guid: 3db4ef7cd0e88644d877a34c11e89483,
+        type: 3}
+      propertyPath: m_BakedTexture
+      value: 
+      objectReference: {fileID: 8900000, guid: 7dbb5c4bdb8293943a55eb6c68885101, type: 3}
     - target: {fileID: 3381852198509504714, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: ebf4269b79f6bb742a9d60218ae42289, type: 3}
+      objectReference: {fileID: 8900000, guid: b9ebfb87acf880f489b6c98e04b3d0b3, type: 3}
     - target: {fileID: 3381852198511578876, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: 4177a2b6017e8704b9ccf15e12ec8d05, type: 3}
+      objectReference: {fileID: 8900000, guid: 7906c4f9b20cf924db6f0b8b956a621a, type: 3}
+    - target: {fileID: 3381852198532055535, guid: 3db4ef7cd0e88644d877a34c11e89483,
+        type: 3}
+      propertyPath: m_BakedTexture
+      value: 
+      objectReference: {fileID: 8900000, guid: 51a22d55617c414418771ba6cb5701f5, type: 3}
     - target: {fileID: 3381852199089004035, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: 49d141cb78abb3d47af17ea5ab668a83, type: 3}
+      objectReference: {fileID: 8900000, guid: 8c842917d4c8e3f4c9182222ab673a3d, type: 3}
     - target: {fileID: 3381852199221573176, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: f5c16bed17b40774a8031120f975629f, type: 3}
+      objectReference: {fileID: 8900000, guid: 14f48345c0e9ee743aaa1314caea3ec4, type: 3}
     - target: {fileID: 3381852199225730406, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: 5474f30918ef48142abb4671f9492857, type: 3}
+      objectReference: {fileID: 8900000, guid: 54fb292de7f50fa42ad87fd4f5937644, type: 3}
     - target: {fileID: 3381852199384648518, guid: 3db4ef7cd0e88644d877a34c11e89483,
         type: 3}
       propertyPath: m_BakedTexture
       value: 
-      objectReference: {fileID: 8900000, guid: cbe4cba9daaab764a9c8fdce27e4d8e3, type: 3}
+      objectReference: {fileID: 8900000, guid: 869fe5b37248b694ea3372c002c66332, type: 3}
+    - target: {fileID: 7306416374335238471, guid: 3db4ef7cd0e88644d877a34c11e89483,
+        type: 3}
+      propertyPath: m_BakedTexture
+      value: 
+      objectReference: {fileID: 8900000, guid: 4b53d41b96ddd2748815d36abacf48ce, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db4ef7cd0e88644d877a34c11e89483, type: 3}
 --- !u!1 &301951521 stripped
@@ -11990,6 +12005,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254246640}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1269531432 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5100783378275977516, guid: 3db4ef7cd0e88644d877a34c11e89483,
+    type: 3}
+  m_PrefabInstance: {fileID: 301951520}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1272382639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15371,6 +15392,9 @@ MonoBehaviour:
   - id: 8
     category: 0
     gameObject: {fileID: 301951521}
+  - id: 9
+    category: 0
+    gameObject: {fileID: 1269531432}
 --- !u!4 &1569314647
 Transform:
   m_ObjectHideFlags: 19
