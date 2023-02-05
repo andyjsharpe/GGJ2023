@@ -9,15 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: acf51a05d34b8ae4393cd72d2f1210d4
   - enabled: 1
-    path: Assets/Scenes/LevelSelector.unity
-    guid: d939fdcfa0f58bf4e9d4ede877699ad2
-  - enabled: 1
-    path: Assets/Scenes/WinScene.unity
-    guid: a4301f2a5c8a8164b90b75608cea02f3
-  - enabled: 1
-    path: Assets/Scenes/FailScene.unity
-    guid: fc5d290e09e53f14a89984640ff609e6
-  - enabled: 1
     path: Assets/Scenes/House1.unity
     guid: 443394efaef96f740ba6c6a397a37420
   - enabled: 1
@@ -38,6 +29,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/House7.unity
     guid: 9ff2b94837760bb4d989841d37df03d4
+  - enabled: 1
+    path: Assets/Scenes/FailScene.unity
+    guid: fc5d290e09e53f14a89984640ff609e6
+  - enabled: 1
+    path: Assets/Scenes/WinScene.unity
+    guid: a4301f2a5c8a8164b90b75608cea02f3
+  - enabled: 1
+    path: Assets/Scenes/LevelSelector.unity
+    guid: d939fdcfa0f58bf4e9d4ede877699ad2
   - enabled: 1
     path: Assets/Scenes/SmudgeCleaning.unity
     guid: 227cd632ce866f24c93f86d53c3314f1

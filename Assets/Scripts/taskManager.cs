@@ -8,13 +8,13 @@ using UnityEngine.SceneManagement;
 public class taskManager : MonoBehaviour
 {
     [SerializeField]
-    private SceneAsset associatedScene; //the main scene this house or minigame belongs to
+    private int associatedScene; //the main scene this house or minigame belongs to
     [SerializeField]
-    private SceneAsset nextScene; //the next main scene
+    private int nextScene; //the next main scene
     [SerializeField]
-    private SceneAsset failScene;
+    private int failScene;
     [SerializeField]
-    private SceneAsset winScene;
+    private int winScene;
     [SerializeField]
     private GameObject[] clocks;
     [SerializeField]
@@ -43,9 +43,17 @@ public class taskManager : MonoBehaviour
         PlayerPrefs.SetInt("toReturnTo", FindObjectOfType<taskManager>().getSceneIndexFromName(associatedScene));
     }
 
+    private string getSceneNameFromIndex(int index)
+    {
+        string scenePath = SceneUtility.GetScenePathByBuildIndex(index);
+        string sceneName = System.IO.Path.GetFileNameWithoutExtension(scenePath);
+
+        return sceneName;
+    }
+
     private void Update()
     {
-        float time = PlayerPrefs.GetFloat(associatedScene.name + "-" + "time");
+        float time = PlayerPrefs.GetFloat(getSceneNameFromIndex(associatedScene) + "-" + "time");
         time -= Time.deltaTime;
         float doneRatio = 1 - time / 120;
         int timeRatio = (int)(Mathf.Min(clocks.Length * doneRatio, clocks.Length - 1));
@@ -54,7 +62,7 @@ public class taskManager : MonoBehaviour
             clock.SetActive(false);
         }
         clocks[timeRatio].SetActive(true);
-        PlayerPrefs.SetFloat(associatedScene.name + "-" + "time", time);
+        PlayerPrefs.SetFloat(getSceneNameFromIndex(associatedScene) + "-" + "time", time);
 
         //level is over
         if (time <= 0)
@@ -66,9 +74,9 @@ public class taskManager : MonoBehaviour
         }
     }
 
-    public int getSceneIndexFromName(SceneAsset scene)
+    public int getSceneIndexFromName(int scene)
     {
-        int buildIndex = SceneManager.GetSceneByName(scene.name).buildIndex;
+        int buildIndex = SceneManager.GetSceneByName(getSceneNameFromIndex(scene)).buildIndex;
 
         //string scenePath = SceneManager.GetSceneByName(scene.name).path;
         //int buildIndex = SceneUtility.GetBuildIndexByScenePath(scenePath);
@@ -79,7 +87,7 @@ public class taskManager : MonoBehaviour
     private void levelTransition()
     {
         //reset timer
-        PlayerPrefs.SetFloat(associatedScene.name + "-" + "time", 120);
+        PlayerPrefs.SetFloat(getSceneNameFromIndex(associatedScene) + "-" + "time", 120);
         float sanityTarget = PlayerPrefs.GetFloat("sanityTarget");
 
         //if level not completed 
@@ -94,7 +102,7 @@ public class taskManager : MonoBehaviour
             clearThisLevel();
             PlayerPrefs.SetInt("toReturnTo", SceneManager.GetActiveScene().buildIndex);
             Debug.Log("Failed");
-            SceneManager.LoadScene(failScene.name);
+            SceneManager.LoadScene(failScene);
             return;
         }
 
@@ -108,10 +116,10 @@ public class taskManager : MonoBehaviour
         //clear the playerprefs in the next level
         clearNextLevel();
 
-        PlayerPrefs.SetString("toReturnToS", nextScene.name);
+        PlayerPrefs.SetString("toReturnToS", getSceneNameFromIndex(nextScene));
 
         //open next scene
-        SceneManager.LoadScene(winScene.name);
+        SceneManager.LoadScene(winScene);
     }
 
     private bool requiredDone()
@@ -151,19 +159,19 @@ public class taskManager : MonoBehaviour
 
     public bool isTaskDone(TaskOptions option)
     {
-        string lookup = associatedScene.name + "-" + option.ToString();
+        string lookup = getSceneNameFromIndex(associatedScene) + "-" + option.ToString();
         bool check = PlayerPrefs.GetInt(lookup) == 1;
         //Debug.Log(lookup + " returns: " + check.ToString());
         return check;
     }
 
     //clears all tasks in the next level
-    private void clearLevel(SceneAsset scene)
+    private void clearLevel(int scene)
     {
         string[] taskNames = System.Enum.GetNames(typeof(TaskOptions));
         foreach (string taskName in taskNames)
         {
-            PlayerPrefs.SetInt(scene.name + "-" + taskName, 0);
+            PlayerPrefs.SetInt(getSceneNameFromIndex(scene) + "-" + taskName, 0);
         }
     }
 
