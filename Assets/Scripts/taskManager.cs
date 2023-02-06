@@ -23,6 +23,7 @@ public class taskManager : MonoBehaviour
     private TaskOptions[] optionalTasks;
     [SerializeField]
     private int levelNum = 1;
+    public float maxTime = 60.0f;
 
     public enum TaskOptions
     {
@@ -55,7 +56,7 @@ public class taskManager : MonoBehaviour
     {
         float time = PlayerPrefs.GetFloat(getSceneNameFromIndex(associatedScene) + "-" + "time");
         time -= Time.deltaTime;
-        float doneRatio = 1 - time / 120;
+        float doneRatio = 1 - time / maxTime;
         int timeRatio = (int)(Mathf.Min(clocks.Length * doneRatio, clocks.Length - 1));
         foreach (GameObject clock in clocks)
         {
@@ -87,7 +88,7 @@ public class taskManager : MonoBehaviour
     private void levelTransition()
     {
         //reset timer
-        PlayerPrefs.SetFloat(getSceneNameFromIndex(associatedScene) + "-" + "time", 120);
+        PlayerPrefs.SetFloat(getSceneNameFromIndex(associatedScene) + "-" + "time", maxTime);
         float sanityTarget = PlayerPrefs.GetFloat("sanityTarget");
 
         //if level not completed 
@@ -107,7 +108,7 @@ public class taskManager : MonoBehaviour
         }
 
         //increase sanity based on number of optional tasks done
-        sanityTarget += (1 - optionalDoneRatio()) / 6.0f; //makes it so if no optional tasks are done, sanity will reach last by the last level
+        sanityTarget += (1 - optionalDoneRatio() / 2) / 6.0f; //makes it so if no optional tasks are done, sanity will reach last by the last level
         sanityTarget = Mathf.Min(sanityTarget, 1);
         PlayerPrefs.SetFloat("sanityTarget", sanityTarget);
 
@@ -116,7 +117,7 @@ public class taskManager : MonoBehaviour
         //clear the playerprefs in the next level
         clearNextLevel();
 
-        PlayerPrefs.SetFloat(getSceneNameFromIndex(nextScene) + "-" + "time", 120);
+        PlayerPrefs.SetFloat(getSceneNameFromIndex(nextScene) + "-" + "time", maxTime);
 
         PlayerPrefs.SetString("toReturnToS", getSceneNameFromIndex(nextScene));
 

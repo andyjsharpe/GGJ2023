@@ -15,8 +15,8 @@ public class BookGenerator : MonoBehaviour
     public const int LETTERS_PER_LINE = 33; //27
     public const int LINES_PER_PAGE = 13;
 
-    public int READING_LIMIT;
-    public static int READING_COUNT;
+    public int READING_LIMIT = 0;
+    public int READING_COUNT = 0;
 
     public int DAY = 2;
 
@@ -29,6 +29,8 @@ public class BookGenerator : MonoBehaviour
     {
 
         taskCompleter = GetComponent<TaskCompleter>();
+
+        DAY = PlayerPrefs.GetInt("toReturnTo");
 
         List<string> lines = generateLines(getDayString());
         Debug.Log("# of Lines: " + lines.Count);
@@ -67,6 +69,9 @@ public class BookGenerator : MonoBehaviour
             }
         }
 
+        Debug.Log("Count: " + READING_COUNT);
+        Debug.Log("Limit: " + READING_LIMIT);
+
     }
 
     // Update is called once per frame
@@ -76,7 +81,7 @@ public class BookGenerator : MonoBehaviour
         {
             complete = true;
             Debug.Log("TASK COMPLETED!");
-            DAY++;
+            //DAY++;
             taskCompleter.completeTask(taskManager.TaskOptions.Read); //This completes the "Read" task
         }
     }

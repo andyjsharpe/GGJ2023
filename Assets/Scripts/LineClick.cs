@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -16,7 +14,7 @@ public class LineClick : MonoBehaviour
         {
             changed = true;
             textMeshPro.color = clicked;
-            BookGenerator.READING_COUNT++;
+            FindObjectOfType<BookGenerator>().READING_COUNT++;
         }
     }
 }
