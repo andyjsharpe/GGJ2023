@@ -30,6 +30,8 @@ public class BookGenerator : MonoBehaviour
 
         taskCompleter = GetComponent<TaskCompleter>();
 
+        DAY = PlayerPrefs.GetInt("toReturnTo");
+
         List<string> lines = generateLines(getDayString());
         Debug.Log("# of Lines: " + lines.Count);
 
