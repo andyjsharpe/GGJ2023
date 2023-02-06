@@ -55,7 +55,7 @@ public class taskManager : MonoBehaviour
     {
         float time = PlayerPrefs.GetFloat(getSceneNameFromIndex(associatedScene) + "-" + "time");
         time -= Time.deltaTime;
-        float doneRatio = 1 - time / 120;
+        float doneRatio = 1 - time / 90;
         int timeRatio = (int)(Mathf.Min(clocks.Length * doneRatio, clocks.Length - 1));
         foreach (GameObject clock in clocks)
         {
@@ -87,7 +87,7 @@ public class taskManager : MonoBehaviour
     private void levelTransition()
     {
         //reset timer
-        PlayerPrefs.SetFloat(getSceneNameFromIndex(associatedScene) + "-" + "time", 120);
+        PlayerPrefs.SetFloat(getSceneNameFromIndex(associatedScene) + "-" + "time", 90);
         float sanityTarget = PlayerPrefs.GetFloat("sanityTarget");
 
         //if level not completed 
@@ -116,7 +116,7 @@ public class taskManager : MonoBehaviour
         //clear the playerprefs in the next level
         clearNextLevel();
 
-        PlayerPrefs.SetFloat(getSceneNameFromIndex(nextScene) + "-" + "time", 120);
+        PlayerPrefs.SetFloat(getSceneNameFromIndex(nextScene) + "-" + "time", 90);
 
         PlayerPrefs.SetString("toReturnToS", getSceneNameFromIndex(nextScene));
 

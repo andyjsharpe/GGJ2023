@@ -6,7 +6,7 @@ public class WateringTask : MonoBehaviour
 {
     // Variables & Fields
     public static float WATERING_RATE = 20f;
-    public static float WATERING_LIMIT = 100f;
+    public static float WATERING_LIMIT = 60f;
     public static int WATERED_COUNT = 0;
 
     [SerializeField] Vector2 START_POS;
