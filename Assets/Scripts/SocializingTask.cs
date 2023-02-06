@@ -20,7 +20,7 @@ public class SocializingTask : MonoBehaviour
     void Start()
     {
         taskCompleter = GetComponent<TaskCompleter>();
-        messageCountdown = Random.Range(5.0f, 10.0f);
+        messageCountdown = Random.Range(2.0f, 8.0f);
         phoneUp = false;
     }
 
