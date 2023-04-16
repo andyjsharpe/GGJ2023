@@ -12,7 +12,7 @@ public class BookGenerator : MonoBehaviour
     [SerializeField] GameObject rightPage;
     [SerializeField] GameObject linePrefab;
 
-    public const int LETTERS_PER_LINE = 33; //27
+    public const int LETTERS_PER_LINE = 30; //27
     public const int LINES_PER_PAGE = 13;
 
     public int READING_LIMIT = 0;
@@ -32,7 +32,7 @@ public class BookGenerator : MonoBehaviour
 
         DAY = PlayerPrefs.GetInt("toReturnTo");
 
-        List<string> lines = generateLines(getDayString());
+        List<string> lines = generateLinesWords(getDayString());
         Debug.Log("# of Lines: " + lines.Count);
 
         // Add line to left page
@@ -84,6 +84,94 @@ public class BookGenerator : MonoBehaviour
             //DAY++;
             taskCompleter.completeTask(taskManager.TaskOptions.Read); //This completes the "Read" task
         }
+    }
+
+    private List<string> generateLinesWords(string day)
+    {
+        // Create new ArrayList
+        List<string> lines = new List<string>();
+        string[] paragraphs = day.Split("\r\n");
+
+        foreach (string par in paragraphs)
+        {
+            bool trim = false;
+            for (int i = 0; i < par.Length;)
+            {
+                string line = "";
+                if (i + LETTERS_PER_LINE < par.Length)
+                {
+                    line = par.Substring(i, LETTERS_PER_LINE);
+
+                    // Remove broken words
+
+                    int lastSpace = 0;
+
+                    while (line.IndexOf(" ", lastSpace+1) != -1)
+                    {
+                        lastSpace = line.IndexOf(" ", lastSpace+1);
+                    }
+
+                    line = line.Substring(0, lastSpace);
+                    i += lastSpace;
+                }
+                else
+                {
+                    line = par.Substring(i);
+                    i += LETTERS_PER_LINE;
+                }
+
+                if (trim)
+                    line = line.Substring(1);
+                trim = true;
+
+                lines.Add(line);
+            }
+
+            // Add Empty Line
+            lines.Add("");
+        }
+
+        return lines;
+    }
+
+    private List<string> generateLinesNew(string day)
+    {
+        // Create new ArrayList
+        List<string> lines = new List<string>();
+        string[] paragraphs = day.Split("\r\n");
+
+        foreach (string par in paragraphs)
+        {
+            int lineStart = 0;
+            int lineEnd = 0;
+            while (lineEnd != -1)
+            {
+                int i = lineStart;
+                lineEnd = par.IndexOf(" ", i+1);
+
+                // Find valid end position without breaking words
+                while ((lineEnd != -1) && ((lineEnd - lineStart) < LETTERS_PER_LINE))
+                {
+                    i = lineEnd;
+                    lineEnd = par.IndexOf(" ", i+1);
+                }
+
+                // Take substring and add line
+                string line = (lineEnd == -1) ? par.Substring(lineStart) : par.Substring(lineStart, i - lineStart);
+                if (line.IndexOf(" ") == 0)
+                {
+                    line.Remove(0, 1);
+                }
+                lines.Add(line);
+
+                lineStart = i+1;
+            }
+
+            // Add Empty Line
+            lines.Add("");
+        }
+
+        return lines;
     }
 
     private List<string> generateLines(string day)
