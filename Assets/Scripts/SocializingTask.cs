@@ -9,7 +9,6 @@ public class SocializingTask : MonoBehaviour
     private float messageCountdown;
     private bool socialized = false;
     private bool recieved = false;
-    private bool phoneUp = false;
     [SerializeField]
     private GameObject phoneObj;
     [SerializeField]
@@ -20,8 +19,11 @@ public class SocializingTask : MonoBehaviour
     void Start()
     {
         taskCompleter = GetComponent<TaskCompleter>();
-        messageCountdown = Random.Range(2.0f, 8.0f);
-        phoneUp = false;
+        messageCountdown = Random.Range(4.0f, 10.0f);
+        if (FindObjectOfType<taskManager>().isTaskDone(taskManager.TaskOptions.Socialize))
+        {
+            socialized = true;
+        }
     }
 
     public void OnPhone(InputValue value)
@@ -31,31 +33,18 @@ public class SocializingTask : MonoBehaviour
             return;
         }
         
-        //toggle phone
-        if (phoneUp)
+        if (!socialized)
         {
-            phoneObj.GetComponent<RectTransform>().anchoredPosition = new Vector3(-40.0f, -640.0f, 0.0f);
-            alertText.text = "[Q]: Check";
-            if (!socialized)
+            socialized = true;
+            taskCompleter.completeTaskNoLoad(taskManager.TaskOptions.Socialize);
+            //recalculate tasks
+            foreach (TaskActivator taskActivator in FindObjectsOfType<TaskActivator>())
             {
-                socialized = true;
-                taskCompleter.completeTaskNoLoad(taskManager.TaskOptions.Socialize);
-                //recalculate tasks
-                foreach (TaskActivator taskActivator in FindObjectsOfType<TaskActivator>())
-                {
-                    taskActivator.recalcTasks();
-                }
+                taskActivator.recalcTasks();
             }
-        } else if (!socialized)
-        {
-            phoneObj.GetComponent<RectTransform>().anchoredPosition = new Vector3(-40.0f, 0.0f, 0.0f);
-            alertText.text = "[Q]: Answer";
-        } else
-        {
-            phoneObj.GetComponent<RectTransform>().anchoredPosition = new Vector3(-40.0f, 0.0f, 0.0f);
-            alertText.text = "[Q]: Close";
+            phoneObj.GetComponent<Animator>().SetBool("Ringing", false);
+            phoneObj.GetComponent<AudioSource>().Stop();
         }
-        phoneUp = !phoneUp;
     }
 
     // Update is called once per frame
@@ -64,7 +53,11 @@ public class SocializingTask : MonoBehaviour
         messageCountdown -= Time.deltaTime;
         if (messageCountdown <= 0)
         {
-            phoneObj.SetActive(true);
+            if (!recieved && !socialized)
+            {
+                phoneObj.GetComponent<Animator>().SetBool("Ringing", true);
+                phoneObj.GetComponent<AudioSource>().Play();
+            }
             recieved = true;
         }
     }

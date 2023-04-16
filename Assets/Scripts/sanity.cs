@@ -7,7 +7,7 @@ using UnityEngine.Rendering.HighDefinition;
 
 public class sanity : MonoBehaviour
 {
-    private float sanityTarget;
+    [SerializeField] private float sanityTarget;
     private float sanityVal = 0;    //0 = "full", higher values are more "insane"
     private float randVal = 0;
     private Volume mainVol;
