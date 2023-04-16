@@ -5018,12 +5018,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d3a85ecde41a8246a79669975912b74, type: 3}
---- !u!20 &509603557 stripped
-Camera:
-  m_CorrespondingSourceObject: {fileID: 9005220659476430821, guid: 2d3a85ecde41a8246a79669975912b74,
-    type: 3}
-  m_PrefabInstance: {fileID: 509603556}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &542276438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9917,14 +9911,14 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 1
-  m_Camera: {fileID: 509603557}
-  m_PlaneDistance: 0.2001
+  m_Camera: {fileID: 2310404354137990503}
+  m_PlaneDistance: 1.5
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 25
+  m_AdditionalShaderChannelsFlag: -1
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -20301,6 +20295,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2310404354179764038, guid: 204b7250f09023b4cbcd5d73e64c5d65,
+        type: 3}
+      propertyPath: dithering
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310404354179764038, guid: 204b7250f09023b4cbcd5d73e64c5d65,
+        type: 3}
+      propertyPath: volumeLayerMask.m_Bits
+      value: 512
+      objectReference: {fileID: 0}
+    - target: {fileID: 2310404354179764038, guid: 204b7250f09023b4cbcd5d73e64c5d65,
+        type: 3}
+      propertyPath: customRenderingSettings
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2310404354179764089, guid: 204b7250f09023b4cbcd5d73e64c5d65,
         type: 3}
       propertyPath: m_Name
@@ -20308,3 +20317,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 204b7250f09023b4cbcd5d73e64c5d65, type: 3}
+--- !u!20 &2310404354137990503 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2310404354179764036, guid: 204b7250f09023b4cbcd5d73e64c5d65,
+    type: 3}
+  m_PrefabInstance: {fileID: 2310404354137990502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2310404354137990504 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2310404354179764089, guid: 204b7250f09023b4cbcd5d73e64c5d65,
+    type: 3}
+  m_PrefabInstance: {fileID: 2310404354137990502}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2310404354137990505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2310404354137990504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: 5b93ac98bba590f4c9e7a78d42a46cbe, type: 2}

@@ -35,8 +35,8 @@ public class camLerp : MonoBehaviour
         counter += Time.deltaTime;
         transform.position = Vector3.Lerp(oldP, target.position, counter / Duration);
         transform.rotation = Quaternion.Lerp(oldR, target.rotation, counter / Duration);
-        light1.intensity = -intensity1 * Mathf.Sin(func(counter - 1f, Duration));
-        light2.intensity = -intensity2 * Mathf.Sin(func(counter - 1f, Duration) - counter);
+        light1.intensity = -intensity1 * Mathf.Sin(func(counter - 0.5f, Duration));
+        light2.intensity = -intensity2 * Mathf.Sin(func(counter - 0.5f, Duration) - counter);
         if (filter != null)
         {
             filter.cutoffFrequency = Mathf.Lerp(10, maxCutoff, counter / Duration);
