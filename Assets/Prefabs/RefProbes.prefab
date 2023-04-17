@@ -294,7 +294,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 49d141cb78abb3d47af17ea5ab668a83, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 9c4e872b42517474a8ca5ab9e6c480e1, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -1226,7 +1226,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: cbe4cba9daaab764a9c8fdce27e4d8e3, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: ebf4269b79f6bb742a9d60218ae42289, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -1692,7 +1692,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 5474f30918ef48142abb4671f9492857, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 4177a2b6017e8704b9ccf15e12ec8d05, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -2624,7 +2624,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: f5c16bed17b40774a8031120f975629f, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 49d141cb78abb3d47af17ea5ab668a83, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -3090,7 +3090,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 4177a2b6017e8704b9ccf15e12ec8d05, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: f5c16bed17b40774a8031120f975629f, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -3556,7 +3556,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: ebf4269b79f6bb742a9d60218ae42289, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 5474f30918ef48142abb4671f9492857, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -4022,7 +4022,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: 9c4e872b42517474a8ca5ab9e6c480e1, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: cbe4cba9daaab764a9c8fdce27e4d8e3, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:
@@ -4261,7 +4261,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5100783378275977516}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.8, y: 1.42, z: 1.34}
+  m_LocalPosition: {x: 10.25, y: 1.42, z: 1.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4488,7 +4488,7 @@ MonoBehaviour:
     camera:
       camera: 0
   m_ProxyVolume: {fileID: 0}
-  m_BakedTexture: {fileID: 8900000, guid: f5c16bed17b40774a8031120f975629f, type: 3}
+  m_BakedTexture: {fileID: 8900000, guid: 9d9abeb4ce1418b49a05466b7f07b25e, type: 3}
   m_CustomTexture: {fileID: 0}
   m_BakedRenderData:
     m_WorldToCameraRHS:

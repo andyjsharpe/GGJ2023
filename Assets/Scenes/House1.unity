@@ -1987,51 +1987,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: RefProbes
       objectReference: {fileID: 0}
-    - target: {fileID: 3381852198077285805, guid: 3db4ef7cd0e88644d877a34c11e89483,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3381852198230054672, guid: 3db4ef7cd0e88644d877a34c11e89483,
-        type: 3}
-      propertyPath: m_BakedTexture
-      value: 
-      objectReference: {fileID: 8900000, guid: 9c4e872b42517474a8ca5ab9e6c480e1, type: 3}
-    - target: {fileID: 3381852198509504714, guid: 3db4ef7cd0e88644d877a34c11e89483,
-        type: 3}
-      propertyPath: m_BakedTexture
-      value: 
-      objectReference: {fileID: 8900000, guid: ebf4269b79f6bb742a9d60218ae42289, type: 3}
-    - target: {fileID: 3381852198511578876, guid: 3db4ef7cd0e88644d877a34c11e89483,
-        type: 3}
-      propertyPath: m_BakedTexture
-      value: 
-      objectReference: {fileID: 8900000, guid: 4177a2b6017e8704b9ccf15e12ec8d05, type: 3}
-    - target: {fileID: 3381852199089004035, guid: 3db4ef7cd0e88644d877a34c11e89483,
-        type: 3}
-      propertyPath: m_BakedTexture
-      value: 
-      objectReference: {fileID: 8900000, guid: 49d141cb78abb3d47af17ea5ab668a83, type: 3}
-    - target: {fileID: 3381852199221573176, guid: 3db4ef7cd0e88644d877a34c11e89483,
-        type: 3}
-      propertyPath: m_BakedTexture
-      value: 
-      objectReference: {fileID: 8900000, guid: f5c16bed17b40774a8031120f975629f, type: 3}
-    - target: {fileID: 3381852199225730406, guid: 3db4ef7cd0e88644d877a34c11e89483,
-        type: 3}
-      propertyPath: m_BakedTexture
-      value: 
-      objectReference: {fileID: 8900000, guid: 5474f30918ef48142abb4671f9492857, type: 3}
-    - target: {fileID: 3381852199384648518, guid: 3db4ef7cd0e88644d877a34c11e89483,
-        type: 3}
-      propertyPath: m_BakedTexture
-      value: 
-      objectReference: {fileID: 8900000, guid: cbe4cba9daaab764a9c8fdce27e4d8e3, type: 3}
-    - target: {fileID: 7306416374335238471, guid: 3db4ef7cd0e88644d877a34c11e89483,
-        type: 3}
-      propertyPath: m_BakedTexture
-      value: 
-      objectReference: {fileID: 8900000, guid: 9d9abeb4ce1418b49a05466b7f07b25e, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3db4ef7cd0e88644d877a34c11e89483, type: 3}
 --- !u!1 &301951521 stripped
