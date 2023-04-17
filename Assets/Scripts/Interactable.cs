@@ -9,10 +9,15 @@ public class Interactable : MonoBehaviour
     private taskManager taskManager;
     [SerializeField]
     private taskManager.TaskOptions task;
+    [SerializeField] private GameObject glow;
 
     private void Start()
     {
         taskManager = FindObjectOfType<taskManager>();
+        if (!isDoable())
+        {
+            Destroy(glow);
+        }
     }
 
     public bool isDoable()
