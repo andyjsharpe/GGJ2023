@@ -42,18 +42,21 @@ public class WateringTask : MonoBehaviour
     }
 
     // Reading Collision with Plant
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnT(Collider2D collision)
     {
         GameObject other = collision.gameObject;
         if (other.tag =="Plant")
         {
             WaterME waterStatus = other.GetComponent<WaterME>();
             waterStatus.watering = true;
-            animator.enabled = true;
+            if (!waterStatus.wateredState.activeSelf)
+            {
+                animator.enabled = true;
+            }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    public void OnTE(Collider2D collision)
     {
         GameObject other = collision.gameObject;
         if (other.tag == "Plant")
