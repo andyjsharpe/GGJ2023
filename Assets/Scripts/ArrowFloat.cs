@@ -19,6 +19,6 @@ public class ArrowFloat : MonoBehaviour
     {
         counter+= Time.deltaTime;
         float completion = (1 + Mathf.Sin(speed * counter))/2;
-        transform.position = ogPos + Vector3.up * height * completion;
+        transform.position = ogPos + transform.up * height * completion;
     }
 }

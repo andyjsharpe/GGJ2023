@@ -9,6 +9,7 @@ public class FertilizerME : MonoBehaviour
     [SerializeField] Sprite unMixed;
     [SerializeField] Sprite Mixed;
     [SerializeField] GameObject arrow;
+    [SerializeField] GameObject spreadMessage;
 
     public bool fertilizing = false;
     bool complete = false;
@@ -40,6 +41,8 @@ public class FertilizerME : MonoBehaviour
                     SpriteRenderer renderer = GetComponent<SpriteRenderer>();
                     //renderer.color = Color.gray;
                     renderer.sprite = Mixed;
+
+                    Destroy(spreadMessage.gameObject);
                 }
             }
         }
@@ -72,5 +75,6 @@ public class FertilizerME : MonoBehaviour
         temp.sprite = unMixed;
         temp.color = Color.white;
         Destroy(arrow);
+        spreadMessage.SetActive(true);
     }
 }
