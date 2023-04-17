@@ -11,8 +11,7 @@ public class SocializingTask : MonoBehaviour
     private bool recieved = false;
     [SerializeField]
     private GameObject phoneObj;
-    [SerializeField]
-    private TextMeshProUGUI alertText;
+    //[SerializeField] private TextMeshProUGUI alertText;
     private TaskCompleter taskCompleter;
 
     // Start is called before the first frame update

@@ -3581,6 +3581,11 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 3451118302482216456, guid: c172df3ef5453e641b340070bbe48fe6,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c172df3ef5453e641b340070bbe48fe6, type: 3}
 --- !u!1 &433566493 stripped
@@ -13648,7 +13653,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   phoneObj: {fileID: 575683065}
-  alertText: {fileID: 1975575965}
 --- !u!114 &1767855025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15537,18 +15541,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1975575965 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8352548431933398977, guid: eb33ddcbe883c7e43bc55490c10e6908,
-    type: 3}
-  m_PrefabInstance: {fileID: 8352548433757878876}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1977158265
 GameObject:
   m_ObjectHideFlags: 0
