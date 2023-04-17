@@ -356,8 +356,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.9319, y: 0.1396}
-  m_SizeDelta: {x: 15.953, y: 6.9058}
+  m_AnchoredPosition: {x: -1.28, y: -1.07}
+  m_SizeDelta: {x: 10.1, y: 4.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1597429544
 MonoBehaviour:
@@ -373,7 +373,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   weedPrefab: {fileID: 3351439776994431637, guid: 9b5286b0a6132634fac4b102f6e35e72,
     type: 3}
-  count: 15
+  count: 8
   spawnArea: {fileID: 1597429543}
 --- !u!114 &1597429545
 MonoBehaviour:

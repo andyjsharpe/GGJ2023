@@ -5,8 +5,19 @@ using UnityEngine;
 public class RemoveME : MonoBehaviour
 {
     // Variables
-    GameObject bag; 
+    GameObject bag;
     public Vector2 START_POS;
+    [SerializeField] private Sprite[] sprites;
+    [SerializeField] private Color color1;
+    [SerializeField] private Color color2;
+
+    private void Start()
+    {
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        spriteRenderer.sprite = sprites[Random.Range(0, sprites.Length)];
+        spriteRenderer.color = Color.Lerp(color1, color2, Random.value);
+        transform.rotation *= Quaternion.Euler(0f, 0f, Random.Range(-15.0f, 15.0f));
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
