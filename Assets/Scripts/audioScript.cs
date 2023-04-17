@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class audioScript : MonoBehaviour
 {
+    [SerializeField] private int endScene;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,7 +16,7 @@ public class audioScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 17)
+        if (SceneManager.GetActiveScene().buildIndex == endScene)
         {
             Destroy(gameObject);
         }
