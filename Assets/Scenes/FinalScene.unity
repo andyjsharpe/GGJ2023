@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: c8fba38faadecf148a7e627aadd1c6d2,
+  m_LightingDataAsset: {fileID: 112000000, guid: 6479bd7d19bd58b46be9bb9590b42e40,
     type: 2}
   m_LightingSettings: {fileID: 4890085278179872738, guid: 8d19206c4aa0a73459530b7de4271492,
     type: 2}
@@ -5710,6 +5710,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sunflower
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: d8085b53bf13b27408835219fb2174f7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d8085b53bf13b27408835219fb2174f7,
         type: 3}

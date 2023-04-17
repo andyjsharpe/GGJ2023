@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 262.38354, g: 325.1084, b: 430.30957, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 083d132ea24b24b4a8d6351f3f3f236a,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -450,14 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9728d1645d70a2e41ac977bc477d416a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainScenes:
-  - {fileID: 102900000, guid: 443394efaef96f740ba6c6a397a37420, type: 3}
-  - {fileID: 102900000, guid: 443394efaef96f740ba6c6a397a37420, type: 3}
-  - {fileID: 102900000, guid: 443394efaef96f740ba6c6a397a37420, type: 3}
-  - {fileID: 102900000, guid: 443394efaef96f740ba6c6a397a37420, type: 3}
-  - {fileID: 102900000, guid: 443394efaef96f740ba6c6a397a37420, type: 3}
-  - {fileID: 102900000, guid: 443394efaef96f740ba6c6a397a37420, type: 3}
-  - {fileID: 102900000, guid: 443394efaef96f740ba6c6a397a37420, type: 3}
+  mainScenes: 00000000000000000000000000000000000000000000000000000000
   levelPrefab: {fileID: 1792066016898993823, guid: 7a063ebe6433d504d97a090d19811f6a,
     type: 3}
   indicator: {fileID: 0}
