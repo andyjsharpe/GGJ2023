@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.XR.Oculus.Input;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,6 +7,8 @@ public class CleaningTask : MonoBehaviour
     [SerializeField] GameObject[] smudges;
     [SerializeField] GameObject smudgePrefab;
     [SerializeField] int count;
+    [SerializeField] float innerDist;
+    [SerializeField] float outerDist;
 
     [SerializeField] string smudgeSpriteLocation;
 
@@ -30,10 +29,9 @@ public class CleaningTask : MonoBehaviour
             Sprite randomSmudge = smudgeSprites[(int) Random.Range(0, smudgeSprites.Length - 1)];
 
             // Randomize Spawn Location
-            RectTransform parent = (RectTransform)this.transform.transform;
-            Vector2 randomPos = new Vector2();
-            randomPos.x = Random.Range(0, parent.rect.width) - parent.rect.width / 2;
-            randomPos.y = Random.Range(0, parent.rect.height) - parent.rect.height / 2;
+
+            Vector2 randomVector = Random.insideUnitCircle;
+            Vector2 randomPos = randomVector * (outerDist - innerDist) + randomVector.normalized * innerDist;
 
             // Create Smudge Object
             GameObject smudge = Instantiate(smudgePrefab, this.transform);
@@ -43,7 +41,10 @@ public class CleaningTask : MonoBehaviour
             img.sprite = randomSmudge;
 
             // Change Position
-            smudge.transform.localPosition = new Vector3(randomPos.x, randomPos.y, 0);
+            smudge.transform.position = new Vector3(randomPos.x, randomPos.y, 0) + transform.position;
+
+            // Change rotation
+            smudge.transform.rotation = Quaternion.FromToRotation(Vector3.right, randomPos);
         }
         
     }
