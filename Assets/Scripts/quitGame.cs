@@ -7,5 +7,6 @@ public class quitGame : MonoBehaviour
     public void doQuit()
     {
         Application.Quit();
+        Debug.LogError("Game Quits here");
     }
 }
